@@ -1,0 +1,27 @@
+<git 사용법>
+* 업로드 할  폴더 우클릭 - git bash 열기!
+
+$ git init
+--> 깃 시작!
+
+$ git remote add origin (주소)
+--> 깃과 내 깃허브 레포지토리와 연동
+
+$ git add . (or 파일명)
+--> 업로드할 파일을 add 하기
+
+$ git commit -m "메세지"
+--> 커밋 메시지와 함께 커밋하기
+* 로그인 필요 - 아래 둘중 하나로 로그인 하기 *
+git config --global user.email "kjw5263@naver.com"
+git config --global user.name "name"
+
+$ git push origin (master)
+--> master 브랜치로 푸시 (업로드)  
+
+
+$ git pull origin master 
+--> repository에 commit 된 것 내려받기
+
+$ git clone (주소)
+--> repository 전부 다운로드 받음
