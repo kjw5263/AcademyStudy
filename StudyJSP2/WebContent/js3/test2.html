@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	// 브라우저 객체 모델(BOM) : 해당 웹 브라우저에 내장되어 있는 객체
+	// Window객체 하위에 여러개의 객체가 포함되어 있음. (최상위 객체)
+	// => document, screen, location, history ...
+	
+	// window 객체 안에 있는 메소드
+	// alert(), prompt(), confirm(), ...
+	
+	// 우리가 아는 메소드는? 이런 형식!! test(); => 객체.test();
+	function test() {	}
+	
+	//window.alert("안녕하세요");
+	//alert("안녕하세요, 두 개 똑같아요 ");
+	// => window 객체정보는 생략 가능
+	
+	
+	// open() : 새로운 브라우저를 띄울 때 사용 (새창 만들기)
+	// window.open("url경로", "창이름", "옵션");
+	//window.open("test1.html", "팝업 테스트", "width=500, height=600");
+	
+	function myOpen(){ 
+		window.open('test1.html','','width=500, height=600, left=400, top=400');
+	}
+	
+	/* 지금 현재 있는 창을 닫는다!  */
+	//window.close();
+	
+
+	function myOpen2(){
+		window.open('test2_pop.html', '', 'width=500, height=500');
+	}
+
+</script>
+</head>
+<body>
+	<h1> WebContent/js3/test2.html</h1>
+	
+	<!-- 버튼 클릭 시 test1.html 새창으로 열기  -->
+	<input type="button" value="창열기" onclick="window.open('test1.html','','width=500, height=600')">
+	
+	
+	<!-- 클릭 이벤트에 js넣기 -->
+	<input type="button" value="창열기(js)" onclick=" myOpen(); ">
+	
+	<!-- 버튼 이벤트에 창 닫기  -->
+	<!-- 팝업창은 닫히지 않고 현재 창만 닫힘 -->
+	<input type="button" value="창닫기" onclick="window.close()">
+	
+	<hr> 
+	
+	
+	<!-- myOpen2() 호출해서 새창열기
+		test2_pop.html 생성 후 (팝업-500*500)
+		+ 새창만 닫는 버튼 추가 -->
+	<input type="button" value="팝업열기" onclick=" myOpen2() ">
+	
+	
+	
+	
+	<hr>
+	<form action="" name="fr">
+		<input type="text" name="txt" value="">
+		<!-- 입력창에 쓰는 것 = value 항목에 입력하는것 -->
+	</form>
+	
+	
+	
+	
+	
+	
+</body>
+</html>

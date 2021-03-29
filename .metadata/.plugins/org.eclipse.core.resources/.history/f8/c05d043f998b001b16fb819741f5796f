@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+function func1() {
+	// window.document.폼태그.select이름.속성
+	// select라는 이름은 셀렉트 자체를 의미하고,
+	// option에 인덱스는 셀렉트의 값에 접근 함
+	alert("name : " + document.forms[0].subject.name);
+	//alert("name : " + document.fr.options[0].name);	//-> 에러
+	
+	// select 태그에 포함되어 있는 옵션의 개수
+	alert("length : " + document.fr.subject.length);
+	
+	
+	alert("type : " + document.fr.subject.type); // multiple이냐 아니냐
+	
+	
+	
+	//			"	  .  "  .options[0].속성
+	
+}
+
+</script>
+</head>
+<body>
+	<h2> WebContent/js4/test4.html </h2>
+	
+	<fieldset>
+		<form action="" name="fr">
+			과목을 선택하시오.
+			<!-- url로 데이터 보낼 때, select에 name을 지정해주면 url에 선택한 데이터 전송됨 -->
+			 <!-- select에 size, multiple 옵션 줄 수 있음 -->
+			<select name="subject">
+				<option value=""> 선택하시오 </option>
+				<option value="java"> 자바 </option>
+				<option value="js"> 자바스크립트 </option>
+				<option value="web"> 웹 </option>
+				<option value="db"> 디비 </option>
+			</select>
+			
+			<input type="submit" value="전송(submit)">
+			
+			<hr>
+			
+			<input type="button" value="select속성 확인하기" onclick="func1()">
+		</form>
+	</fieldset>
+	
+	
+	
+	
+	
+</body>
+</html>

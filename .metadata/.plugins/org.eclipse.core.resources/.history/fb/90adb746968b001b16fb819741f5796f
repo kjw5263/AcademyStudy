@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2> WebContent/js4/test4.html </h2>
+	
+	<fieldset>
+		<form action="">
+			과목을 선택하시오.
+			<select></select>
+				<option>자바</option>
+				<option>자바스크립트</option>
+				<option>웹</option>
+				<option>디비</option>
+			
+		</form>
+	</fieldset>
+	
+	
+	
+	
+	
+</body>
+</html>

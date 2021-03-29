@@ -1,0 +1,56 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1> WebContent/jsp1/test1.jsp</h1>
+	<h2> JSP 기본 요소 </h2>
+	<h3> 1. 주석문 </h3>
+	<h3> 2. JSP 지시어 </h3>
+	<h3> 3. 스크립트 요소 </h3>
+	<h3> 4. 액션 태그 </h3>
+	
+	<!-- HTML 주석 -->
+	<%-- JSP 주석  --%>
+	
+	<script type="text/javascript">
+		// JS 주석
+		/* JS 주석 */
+	</script>
+	
+	<%
+		// java 주석
+		/* java 주석 */
+		/** java 주석 */
+	%>
+	
+	
+	<%
+		// 2. JSP 지시어 (Directive) p.150~
+		// < %@ 속성=값, 속성=값, ... ~ % > 로 만들어져 있는 형태.
+		// < %@ page ~ % > : 페이지에 대한 설명
+		// < %@ include ~ % > : 포함할 때 지시어 (액션태그)
+		// < %@ taglib ~ % > : 태그를 새롭게 추가할 때 사용하는 지시어 (JSTL)
+		// => 해당 파일에서 JSP 코드를 실행할 때, 어떤 방식으로 실행 할 건지 설명하는 코드
+    	// https://developer.mozilla.org/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types
+		
+    	
+    	
+    	// 3. 스크립트 요소 p.160~
+		// => JSP 코드안에 java 코드를 사용가능하게 만드는 것
+		// 3-1. 선언문 (Declare) : 멤버 변수, 멤버 메소드 선언
+		// 3-2. 스크립틀릿 (Scriptlet)
+		// 3-3. 표현식 (Expression)
+	%>
+	
+	
+	
+	
+	
+</body>
+</html>

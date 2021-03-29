@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+function func1() {
+	// select 태그 자체의 속성 확인 하기
+	// window.document.폼태그.select이름.속성
+	// select라는 이름은 셀렉트 자체를 의미하고,
+	// option에 인덱스는 셀렉트의 값에 접근 함
+	alert("name : " + document.forms[0].subject.name);
+	//alert("name : " + document.fr.options[0].name);	//-> 에러
+	
+	// select 태그에 포함되어 있는 옵션의 개수
+	alert("length : " + document.fr.subject.length);
+	
+	// select 태그의 다중선택 여부 속성
+	alert("type : " + document.fr.subject.type); // multiple이냐 아니냐
+	
+	// select 한 것 중에서 어떤 것을 선택했는지? 
+	alert("selectedIndex : " + document.fr.subject.selectedIndex);
+	
+}
+
+
+function func2() {
+	//  select 선택지의 속성
+	//	window.document.폼태그.select이름.options[0].속성 
+	// 각 옵션의 value 속성값 알기
+	alert("value : " + document.fr.subject.options[2].value); // options[0] : 선택하시오 
+	
+	
+	// 각 옵션 대상의 text를 알기
+	alert("text : " + document.fr.subject.options[2].text );
+	
+	// 선택했는지 안했는지에 대한  정보 얻기 -> boolean
+	alert("selected : " + document.fr.subject.options[2].selected);
+}
+
+
+function check1() {
+	// 과목 선택없이 페이지 이동(데이터 전달) 불가
+	// 과목 선택시 페이지 이동
+	
+	// if(document.fr.subject.selectedIndex == 0)
+	// if(document.fr.subject.options[0].selected == true)
+	if(document.fr.subject.options[0].selected){
+		alert("과목을 선택하시오");
+		document.fr.subject.focus();
+		return;
+	}
+	
+	document.fr.submit();
+	
+}
+
+
+
+function check2() {
+	// 과목 선택없이 페이지 이동(데이터 전달) 불가
+	// 과목 선택시 페이지 이동
+	
+	// if(document.fr.subject.selectedIndex == 0)
+	// if(document.fr.subject.options[0].selected == true)
+	if(document.fr.subject.options[0].selected){
+		alert("과목을 선택하시오");
+		document.fr.subject.focus();
+		return false;
+	}
+	/* 기본적으로 submit 이벤트에 넣는 함수이기 때문에 submit 해줄필요 없음 */
+	
+}
+
+
+
+/* select의 과목을 선택했을 때, 선택한 과목의 이름을 출력  (alert) */
+/* "ooo이 선택되었습니다" */
+function choice() {
+		alert(document.fr.subject.options[2].text +  "이 선택되었습니다.")
+
+}
+
+
+
+
+</script>
+</head>
+<body>
+	<h2> WebContent/js4/test4.html </h2>
+	
+	<fieldset>
+		<form action="" name="fr" onsubmit="return check2()">
+			과목을 선택하시오.
+			<!-- url로 데이터 보낼 때, select에 name을 지정해주면 url에 선택한 데이터 전송됨 -->
+			 <!-- select에 size, multiple 옵션 줄 수 있음 -->
+			<select name="subject" onchange="choice()">
+				<option value=""> 선택하시오 </option>
+				<option value="java"> 자바 </option>
+				<option value="js"> 자바스크립트 </option>
+				<option value="web"> 웹 </option>
+				<option value="db"> 디비 </option>
+			</select>
+			
+			<input type="submit" value="전송(submit)">
+			
+			<hr>
+			
+			<input type="button" value="select속성 확인하기" onclick="func1()">
+			<input type="button" value="select속성2 확인하기" onclick="func2()">
+			
+			
+			<hr>
+			
+			<!--  select 선택이 안된 경우 페이지 이동X
+				 과목 선택이 된 경우 페이지 이동 후 정보 전달 -->
+			<input type="button" value="데이터 선택 후 페이지 이동" onclick="check1()">
+			
+		</form>
+	</fieldset>
+	
+	
+	
+	
+	
+</body>
+</html>

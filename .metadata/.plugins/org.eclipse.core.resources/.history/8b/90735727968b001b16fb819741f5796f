@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2> WebContent/js4/test4.html </h2>
+	
+	<fieldset>
+		<form action="">
+			과목을 선택하시오.
+			<select></select>
+		
+		
+		
+		
+		
+		
+		
+		
+		</form>
+	</fieldset>
+	
+	
+	
+	
+	
+</body>
+</html>

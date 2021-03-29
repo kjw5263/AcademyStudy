@@ -1,0 +1,46 @@
+<!-- js1/test2.html -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script type="text/javascript">
+		// 자바 스크립트를 사용해서 화면에 출력 (HTML처럼!)
+		document.write("자바스크립트 코드!");
+		window.document.write("window는 생략 할 수 있습니다.");
+		console.log("자바 스크립트 로그입니다. 브라우저 F12 콘솔을 확인하면 볼 수 있음.");
+		
+		document.write("<br>");
+		
+		// 100 + 200 값을 출력
+		document.write("100+200 의 값은? " + (100 + 200));
+		
+		// '+' 의 역할
+		// 1. + 연산자 : 덧셈
+		// 2. + 연결자 : 문자열 연결
+		//		-> 문자 + 문자 = 문자문자
+		//		-> 문자("A") + 숫자(2) = 문자("A2")
+		//		-> 숫자(2) + 문자("A") = 문자("2A")
+		
+		document.write("<br>");
+		document.write("100+200=" + (100+200));
+		
+		// 이스케이프 문자(특수한 기능을 가지는 문자)
+		// \ + 문자  \n
+		alert("안녕\n하세요");
+		
+		//C:\Program Files\Java\jdk1.8.0_281\bin
+		document.write("C:\\Program Files\\Java\\jdk1.8.0_281\\bin");
+		
+	</script>
+</head>
+
+<body>
+	<h1> HTML 태그 작성시 출력 </h1>
+	태그 없이 HTML 코드 출력
+	
+	<script type="text/javascript">
+		document.write("자바 스크립트 코드222!");
+	</script>
+</body>
+</html>

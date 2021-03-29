@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<input type="button" value="팝업창 닫기" >
+	<fieldset>
+		<form action="" name="frpop">
+			<input type="text" name="poptext">
+		</form>
+	</fieldset>
+</body>
+</html>

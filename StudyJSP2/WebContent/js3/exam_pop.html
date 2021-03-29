@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+function myClose() {
+	opener.document.fr.text.value = document.frpop.text.value;
+	window.close();
+	
+}
+
+</script>
+</head>
+<body>
+	<input type="button" value="팝업창 닫기" onclick="myClose()">
+	<fieldset>
+		<form action="" name="frpop">
+			<input type="text" name="text">
+		</form>
+	</fieldset>
+</body>
+</html>

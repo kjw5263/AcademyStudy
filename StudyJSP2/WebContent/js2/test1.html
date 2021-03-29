@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	// 함수 (function)(자바스크립트) == 메서드(자바)
+	// 데이터를 저장 -> 변수
+	// 실행문을 저장(동작을 모아서 처리) -> 함수
+	// 좀 더 다양한 형태의 표현을 할 수 있고, 코드를 수정하는 데 효율적이다.
+	// 함수 선언 형식
+/*	function 함수명() {
+		실행코드;
+	}
+*/
+
+
+	// 함수 사용
+//	함수명();
+	
+	// "안녕" "아이티윌" 출력하는 구문이 각각 존재
+	// => 두개의 동작을 한번에 처리하는 함수 생성
+	function hello() {
+		document.write("안녕");
+		document.write(" 아이티윌");	
+	}
+	
+	hello();
+	
+	
+	// 익명 함수 - 함수의 이름이 없음, 변수에 저장에서 사용할 뿐!
+	var fun = function () {
+		document.write("<br>");
+	}
+
+	// 익명 함수 사용 - 변수의 이름으로 호출하면 된다
+	fun();
+	
+	
+	// showMyInfo 함수 생성 -> 함수 실행 시 마다 내 정보 출력
+	// "이름", "나이", "사는곳" 출력
+	var showMyInfo = function() {
+		document.write("김지원");
+		document.write("24");
+		document.write("남구");
+	}
+	
+	showMyInfo();
+	
+	document.write("<br>");
+	///////////////////////////////////////////////
+	
+	// 매개변수 주기
+	// 매개변수 6개까지 사용 권장 - 시스템 효율
+/*	function 함수명(매개변수1, ...) {
+		실행코드(매개변수 사용);
+	}
+*/	
+	
+	// 사용(호출) 
+	// 함수명(매개변수1, ... );
+	// myName() 함수 생성 -> 1개의 매개변수(전달인자)-이름
+	// -> 전달받은 이름으로 정보를 출력
+	// * 매개변수명은 의미를 가지고 있는 것이 좋음
+	function myName(name) {
+		document.write("이름 : "+ name + "<br>");
+	}
+	
+	myName("길동이");
+	
+	// 숫자 2개를 입력받는 함수 => 전달받은 두 수의 합
+	function cal(num1, num2){
+		document.write(num1 + "+" + num2 + "=" + (num1+num2) + "<br>");
+	}
+	
+	cal(20,7);
+	cal(23, 2);
+	
+	
+	//////////////////////////////////////
+	// 함수의 결과를 리턴 : 함수의 실행 결과를 반환한다!
+/*	function 함수명() {
+		return ;
+	}
+*/
+
+	//var 변수 = 함수명();
+	function returnTest(){
+		return 100;
+	}
+	
+	var test = returnTest();
+	// returnTest(); // 이렇게 호출만 하면, 리턴된 값이 저장되거나 출력되지 않았으므로 아무것도 뜨지않는다.
+	document.write(test + "<br>");
+	
+	
+	
+	
+	// * 함수(function)의 실행목적
+	// - 함수 선언 후 호출시 포함되어있는 모든 코드를 실행
+	// - 리턴값이 있을 경우 값을 리턴하고 종료
+	// - return 값; (값을 리턴)
+	//   return;	(종료)
+
+	function fun1() {
+		document.write("1");
+		document.write("2");
+		
+		return;
+		document.write("3");
+		document.write("4");
+		return;
+		document.write("5");
+	}
+	
+	fun1();
+	document.write("<br>");
+	
+	
+	///////////////////////////////////////
+	// myABS() 함수 생성, 1개 매개변수 사용
+	// 정수를 입력받아서 절대값을 리턴하는 함수
+	// return 은 웬만하면 한번만 선언하는 것이 좋다 
+/* 	function myABS(inputNum){
+		if(inputNum >=0){
+			
+		} else {
+			inputNum *= -1;
+		}
+		return inputNum;
+	}
+	
+	//var typedNum = prompt();
+	document.write(myABS(-120)); */
+	
+	function myABS(inputNum){
+		if(inputNum < 0) {
+			inputNum = -inputNum;
+		}
+		return inputNum;
+		
+		
+		// 삼항연산자 사용해서 나타내기
+		//return inputNum<0? -inputNum:inputNum;
+	
+	}
+	
+	
+	// mySum(a) => 1~a까지의 합을 출력하는 함수
+	// 1. 함수 생성
+	// 2. 매개변수 1개 필요 (데이터 타입x, 이름만 사용)
+	// 3. 1~a까지 합 계산
+	function mySum(a){
+		var sum = 0;
+		for(var i =1; i<=a; i++){
+			sum += i;
+		}
+		// 4. 계산결과 출력
+		document.write(sum);
+	}
+	
+	// 5. 함수 호출
+	mySum(10);
+	
+	document.write("<br>");
+	
+	
+	
+	// myCal(), 매개변수 3개(숫자, 문자, 숫자)
+	// => 연산의 결과를 리턴
+	// 3, "+", 3 => 6
+	// 함수의 결과를 저장해서 출력 "연산의 결과 : 00"
+	// 문자 - 산술연산자 
+	function myCal(num1, str, num2) {
+		var result=0;
+		switch (str) {
+		case "+":
+			result = num1 + num2;
+			break;
+		case "-":
+			result = num1 - num2;
+			break;
+		case "*":
+			result = num1 * num2;
+			break;
+		case "/":
+			result = num1 / num2;
+			break;
+		case "%":
+			result = num1 % num2;
+			break;
+		default:
+			result = "에러발생";
+		}
+		
+		return result;
+		
+		
+/*		if(str == "+"){
+			result = num1 + num2;
+		} else if(str == "-"){
+			result = num1 - num2;
+		} else if(str == "*"){
+			result = num1 * num2;
+		} else if(str == "/"){
+			result = num1 / num2;
+		} else if(str == "%"){
+			result = num1 % num2;
+		} else {
+			document.write("에러발생");
+		}
+		return result;
+*/
+	}
+	
+	document.write(myCal(10,"+",4)+"<br>");
+	document.write(myCal(10,"-",4)+"<br>");
+	document.write(myCal(10,"*",4)+"<br>");
+	document.write(myCal(10,"/",4)+"<br>");
+	document.write(myCal(10,"%",4)+"<br>");
+	document.write(myCal(10,"$",4)+"<br>");
+	
+	
+	// 내장 함수 : 자바 스크립트에 내장되어 있는 함수
+	// => 함수의 선언 없이 바로 사용가능
+	//document.write();
+	//alert();
+	//confirm();
+	// String();  Boolean();   Number();   -> 형변환 해주는 함수
+	// -> 함수중에서도 대문자로 시작하는 애들 -> 특별한 기능을 가지는 함수라고 알고있으면 된당!
+	
+	var num = 0;
+	
+	// 재귀 함수 : 함수 안에서 자신을 다시 호출 하는 함수
+	function myLoop() {
+		num++;
+		document.write("num : " + num + "<br>");
+		if(num==5){
+			//break;   // 사용할 수 없다!!
+			return;
+		}
+		myLoop();
+	}
+	
+/* 	for(var i=0; i<5; i++){
+		myLoop();
+	} */
+	
+	myLoop();	
+	
+	
+	var val = 200;	// 전역변수 : 자바스크립트 전역 어디에서든 쓸 수 있는 변수 (공통의 값 사용)
+	function valueFun() {
+		var val = 300;	
+		// 지역변수 : 특정 지역에서만 사용가능한 변수, 함수가 끝나면 메모리 회수(특정값 사용)
+		// 지역변수는 함수 호출 시 생성됐다가, 함수 종료시 삭제된다.
+	}
+	
+	valueFun();
+	document.write(val);
+	
+	
+	
+</script>
+
+
+</head>
+<body>
+
+<h1> WebContent/js2/test1.html </h1>
+
+</body>
+</html>

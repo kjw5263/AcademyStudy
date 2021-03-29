@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	// 사용자가 "네이버, 다음, 구글..." 입력시, 해당 페이지로 이동(한/영)
+	var input = prompt("사이트를 입력하세요.");
+	var url = "";
+	switch (input) {
+	case "네이버":
+	case "naver" :
+		url="https://www.naver.com/";
+		break;
+	case "구글":
+	case "google" :
+		url="https://www.google.com/";
+		break;
+	case "다음":
+	case "daum" :
+		url="https://www.daum.net/";
+		break;
+	case "네이트":
+	case "nate" :
+		url="https://www.nate.com/";
+		break;
+	default:
+		alert("해당 사이트는 없습니다.");
+		location.reload();
+	}
+
+	// url에 주소가 있을 때
+	if(url != "") {
+		location.href=url;
+	} 
+	
+/* 	if(url) { 	// Boolean(url) 이므로, 이런식으로 적어도 실행된다! 
+		location.href=url;
+	} 
+ */	
+
+
+</script>
+
+
+
+</head>
+<body>
+	<h1>WebContent/js1/test6_1.html </h1>
+</body>
+</html>

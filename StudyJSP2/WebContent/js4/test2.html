@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	// form 태그 속성 확인 
+	function formAttrCheck() {
+		alert("action : " + document.fr.action);
+		alert("name : " + document.fr.name);
+		alert("method : " + document.fr.method);
+	
+		// document.폼태그.텍스트박스이름.속성 or 기능()     -> 폼태그 안의 요소들도 접근 가능!
+		alert("type : " + document.fr.id.type);
+		alert("type2 : " + document.fr.pw.type);
+		alert("type2 : " + document.fr.pw.name);
+		alert("value : " + document.fr.id.value);
+		
+		
+		
+		// document.폼태그.텍스트박스이름.기능()
+		document.fr.pw.focus();		// 해당 요소를 포커스 함
+		document.fr.pw.blur();		// 해당 요소를 선택 해제 함
+		document.fr.pw.select();	// 해당 요소를 포커스 + 선택
+	}
+	
+	
+	
+	
+	// 유효성 체크 - 데이터 입력이 올바르게 되어 있는지 판단하는 동작
+	function check1() {
+		// 아이디의 정보가 입력이 되어있는지 아닌지 판단
+		// 아이디를 아무것도 입력하지 않으면 "null"이 아닌 공백문자""
+		//alert("아이디 값 : " + document.fr.id.value);
+		console.log(document.fr.id.value);
+		
+		
+/* 		// 입력한 값을 통해 유효성 체크하기 
+		if(document.fr.id.value == "") {
+			alert("아이디를 입력하세요");
+		} */
+		
+/* 		// 입력한 값의 길이를 통해 유효성 체크하기
+		if(document.fr.id.value.length > 0){
+			alert("아이디를 입력하셨네요!!!");
+		}
+		
+		// 요소의 id를 가져와서 그 값을 통해 유효성 체크하기 (길이 가능!)
+		if(document.getElementById("id").value == ""){
+			// 태그에 반드시 id 속성 값이 있어야  사용할 수 있는 메소드
+		}
+		 */
+		
+/* 		// 비밀번호 입력 여부 확인
+		if(document.forms[0].pw.value == "" ){
+			alert("비밀번호를 입력하세요");
+		}
+		  */
+		 
+		 
+		 /* 아이디가 입력된 후에 비밀번호 입력여부 체크
+		 	-> 입력정보가 없을 경우 입력 유도 (focus() ) 	
+		 
+		 if(document.fr.id.value == ""){
+			 alert("아이디를 입력하세요");
+			 document.fr.id.focus();
+		 } else {
+			 //alert("아이디 입력했음 : " + document.fr.id.value)
+			 if(document.fr.pw.value==""){
+				 alert("비밀번호를 입력하세요");
+				 document.fr.pw.focus();
+			 } else{
+				 //alert("비밀번호 입력함 : " + document.fr.pw.value);
+				 alert("로그인 성공");
+			 }
+		 }
+		 	*/ 
+		 	
+		 	
+		 /* 선생님 방식 */
+	 
+		 if(document.getElementById("id").value == "" ){
+			 alert("아이디를 입력하세요");
+			 document.fr.id.focus();
+			 return;
+		 }
+
+		 // 사용자의 아이디가 "admin" 사용불가
+		 if(document.fr.id.value == "admin"){
+			 alert("사용할 수 없는 아이디 입니다.");
+			 document.fr.id.value = "";
+			 document.fr.id.focus();
+			 return;
+		 }
+		 
+
+		 // 사용자의 아이디가 5~10자리 내외만 사용가능
+		 var idlen = document.fr.id.length;
+		 if ( (idlen < 5) && (idlen > 10)){		//  다른표현 : !(idlen>=5 && idlen<=10)
+			 alert("사용할 수 없는 아이디 입니다.");
+			 document.fr.id.value = "";
+			 document.fr.id.focus();
+			 return;
+		 }	
+		 
+		 if(document.getElementById("pw").value == "" ){
+			 alert("비밀번호를 입력하세요");
+			 document.fr.pw.focus();
+			 return;
+		 }
+		 
+		 if(document.fr.msg.value == "") {
+			 alert("메시지를 입력하세요");
+			 document.fr.msg.focus();
+			 return;
+		 }
+		 
+		
+	}
+	
+	
+	function check2() {
+		// 아이디 입력 여부 (공백)
+		if(document.fr.id.value == ""){
+			alert("아이디를 입력하세요.");
+			document.fr.id.focus();
+			//return;		// 함수 자체의 종료이므로 submit의 종료를 제어한 것은 아님!
+			return false;	// false값을 반환하므로, 아래 onsubmit에서 return false; 가 되므로 submit 동작이 제어가 된다!!!
+		}
+		// 아이디의 길이가 5자 이상일때 submit
+		if(document.fr.id.value.length < 5 ){
+			alert("5자 이상 입력하세요");
+			document.fr.id.focus();
+			return false;
+		}
+		// 비밀번호, 메시지를 입력했을 때만 submit 하기
+		if(document.fr.pw.value == "" ){
+			alert("비밀번호를 입력하세요 .");
+			document.fr.pw.focus();
+			return false;
+		}
+		if(document.fr.msg.value == "" ){
+			alert("메시지를 입력하세요 .");
+			document.fr.msg.focus();
+			return false;
+		}
+		
+	}
+	
+	
+	function fun3 () {
+		if (document.fr.ju1.value.length == 6){
+			document.fr.ju2.focus();
+			//next.focus();
+		}
+	}
+	
+	function fun4 () {
+		if (document.fr.ju2.value.length == 7){
+			document.fr.msg.focus();
+		}
+	}
+	
+	
+
+</script>
+
+</head>
+<body>
+	<h2> WebContent/js4/test2.html </h2>
+	
+	<fieldset>
+		
+		<form action="itwill.html" name="fr" method="get" onsubmit="return check2()">
+		
+		아이디 : <input type="text" name="id" id="id" value=""
+				placeholder="아이디를 입력하세요" > <br>
+		<!-- placeholder : 사용자에게 입력을 유도하는 텍스트  -->
+		
+		
+		비밀번호 : <input type="password" name="pw" id="pw"> <br>
+		
+		
+		
+		주민번호 :
+		<input type="text" name="ju1" maxlength="6" onkeyup="fun3()">
+		-
+		<input type="text" name="ju2" maxlenth="7" onkeyup="fun4()">
+		
+		
+		<!-- 메시지 입력했는지 확인하기  -->
+		메시지 : <textarea rows="10" cols="10" name="msg"></textarea>
+		
+		
+		<hr>
+		<input type="button" value="폼태그 속성 확인"  onclick="formAttrCheck()">
+		<input type="button" value="입력값 체크"  onclick="check1()">
+		
+		<hr>
+	
+		<!-- submit은  특별히 제어하지 않으면 값이 전송되어 버린다-->
+		<input type="submit" value="데이터 전송" onclick="check1()">
+			
+		</form>	
+	</fieldset>
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>
