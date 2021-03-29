@@ -1,0 +1,37 @@
+/*
+	생성자?
+	- 객체 생성 시 딱 한번만 호출되는 메소드의 종류
+	- 생성자의 역할 : 클래스로부터 객체 생성 시, 객체의 변수(상태)값을 초기화 하려는 목ㄱ 
+
+
+
+*/
+
+
+class Number {
+	// 변수
+	int number;
+	
+	// 생성자
+	// - new Number(); -> Number객체 호출 시 생성자를 호출하여 number변수의 값을 초기화한 것이었음! 
+	// - 매개변수로 값을 전달받지 않고, number변수의 값을 10으로 초기화할 생성자
+	public Number() {
+		number = 10;
+		System.out.println("기본 생성자 호출되었음");
+	}
+	
+	
+	
+	
+}
+
+
+
+public class Test60 {
+
+	public static void main(String[] args) {
+		Number number = new Number();
+
+	}
+
+}
