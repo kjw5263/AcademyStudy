@@ -24,4 +24,4 @@ $ git pull origin master
 --> repository에 commit 된 것 내려받기
 
 $ git clone (주소)
---> repository 전부 다운로드 받음
+--> repository 전부 다운로드 받음.
