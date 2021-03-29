@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>img 태그</title>
+</head>
+<body>
+
+<h1>img tag로 이미지 넣기</h1>
+
+<ul>
+ <li>alt="이미지 대체텍스트 (설몀문)" ,
+ 	 이미지가 나타나지 않을 때의 설명글,
+ 	 시각 장애인용 음성 낭독기에서의 설명글 </li>
+ <li>src="이미지경로"</li>
+</ul>
+
+<img alt="monster" src="img/ice.jpg">
+
+<h3>속성으로 가로크기 지정</h3>
+<img alt="monster" src="img/ice.jpg" width="200">
+
+<h3>속성으로 세로크기 지정</h3>
+<img alt="monster" src="img/ice.jpg" height="200">
+
+
+</body>
+</html>
