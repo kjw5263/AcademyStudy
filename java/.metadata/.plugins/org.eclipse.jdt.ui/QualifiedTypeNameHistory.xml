@@ -3,7 +3,6 @@
     <fullyQualifiedTypeName name="java.lang.Object"/>
     <fullyQualifiedTypeName name="java.util.function.BiConsumer"/>
     <fullyQualifiedTypeName name="javax.print.attribute.standard.MediaSize.Engineering"/>
-    <fullyQualifiedTypeName name="Student"/>
     <fullyQualifiedTypeName name="java.beans.PersistenceDelegate"/>
     <fullyQualifiedTypeName name="Person"/>
     <fullyQualifiedTypeName name="Goods"/>
@@ -12,7 +11,6 @@
     <fullyQualifiedTypeName name="Number"/>
     <fullyQualifiedTypeName name="Point"/>
     <fullyQualifiedTypeName name="Animal"/>
-    <fullyQualifiedTypeName name="java.time.Year"/>
     <fullyQualifiedTypeName name="java.lang.Iterable"/>
     <fullyQualifiedTypeName name="javax.sql.rowset.JoinRowSet"/>
     <fullyQualifiedTypeName name="java.security.PublicKey"/>
@@ -30,9 +28,15 @@
     <fullyQualifiedTypeName name="java.io.PrintStream"/>
     <fullyQualifiedTypeName name="PrintStream1"/>
     <fullyQualifiedTypeName name="System1"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.awt.desktop.PrintFilesEvent"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="lib.A"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.time.Year"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="Test"/>
+    <fullyQualifiedTypeName name="java.rmi.server.RemoteStub"/>
+    <fullyQualifiedTypeName name="Student"/>
 </qualifiedTypeNameHistroy>
