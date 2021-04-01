@@ -41,7 +41,7 @@
 	
 	%>
 	
-	<h2> 영역객체의 값을 출력 </h2>
+	<h2> 영역객체의 값을 출력-> 같은 영역안에 있는 애들끼리 값을 꺼내쓸 수 있다. </h2>
 	pageContext 내장 객체 공유데이터(속성) : <%=pageContext.getAttribute("page") %><br>
 	request 내장 객체 공유데이터(속성) : <%=request.getAttribute("req") %><br>
 	session 내장 객체 공유데이터(속성) : <%=session.getAttribute("ses") %><br>
@@ -60,19 +60,47 @@
 	<hr>
 	2. javascript 사용 <br>
 	<script type="text/javascript">
-		alert('scopePro2.jsp 페이지로 이동 ');
-		location.href="scopePro2.jsp?id=<%=id%>&pw=1234";
+		//alert('scopePro2.jsp 페이지로 이동 ');
+		//location.href="scopePro2.jsp?id=<%=id%>&pw=1234";
 	</script>
 	
 	
 	
+	3. JSP 사용 <br>
+	실행순서 jsp -> js <br>
+	파라미터 값 전달 가능 + 
+	영역객체 : session, application 정보만 사용 가능 <br>
+	<%
+		System.out.println("scopePro.jsp 페이지 실행!");
+		//response.sendRedirect("scopePro2.jsp?id="+id+"&pw=1234"); // 특정 페이지로 이동할 수 있는 메소드 
+		// 스크립틀릿은 지역변수의 개념을 갖고있기 때문에
+		// 변수를 주고싶다면 스크립틀릿 대신 변수사용하듯이 사용하면 됨
+		// scopePro2.jsp?id=admin 이런식으로 담겨있는 것임
+		// -> 값을 보냈음에도 불구하고 request속성이 null
+		
+		
+	%>
 	
 	
 	
+	4. jsp 액션태그 (forward 방식)
+	<br> 포워딩 방식 이동 : 페이지 이동시 request, response 포함해서 이동하는 방식
+	<br> 			A -> B
+	<br> 페이지 주소 : A
+	<br> 페이지 화면 : B
+	<br> ==> 페이지 주소변경X, 페이지 화면 변경O, request, response 가지고 이동
 	
 	
+	<br> 파라미터 전달가능
+	영역객체 : request, session, application 정보만 사용가능 <br>
 	
+	<%-- <jsp:forward page="scopePro2.jsp?pw=1234"> --%>
+	<jsp:forward page="scopePro2.jsp">
+		<jsp:param value="12341234" name="pw"/>
+	</jsp:forward>
 	
+	// 주소는 A.nhn으로 하고싶지만, 화면은 B.jsp로 띄우고싶을때 forward 사용
+	// form --> pro --(forward)--> pro2
 	
 	
 	
