@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.Object"/>
-    <fullyQualifiedTypeName name="java.util.function.BiConsumer"/>
-    <fullyQualifiedTypeName name="javax.print.attribute.standard.MediaSize.Engineering"/>
     <fullyQualifiedTypeName name="java.beans.PersistenceDelegate"/>
     <fullyQualifiedTypeName name="Person"/>
     <fullyQualifiedTypeName name="Goods"/>
     <fullyQualifiedTypeName name="javax.swing.filechooser.FileNameExtensionFilter"/>
     <fullyQualifiedTypeName name="java.lang.Number"/>
     <fullyQualifiedTypeName name="Number"/>
-    <fullyQualifiedTypeName name="Point"/>
     <fullyQualifiedTypeName name="Animal"/>
     <fullyQualifiedTypeName name="java.lang.Iterable"/>
     <fullyQualifiedTypeName name="javax.sql.rowset.JoinRowSet"/>
@@ -37,7 +33,6 @@
     <fullyQualifiedTypeName name="java.rmi.server.RemoteStub"/>
     <fullyQualifiedTypeName name="Student"/>
     <fullyQualifiedTypeName name="AAA"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="Product"/>
     <fullyQualifiedTypeName name="Customer"/>
@@ -53,4 +48,16 @@
     <fullyQualifiedTypeName name="InitTest"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="Test74"/>
+    <fullyQualifiedTypeName name="javax.swing.plaf.basic.BasicSplitPaneUI.BasicVerticalLayoutManager"/>
+    <fullyQualifiedTypeName name="Init"/>
+    <fullyQualifiedTypeName name="Product2"/>
+    <fullyQualifiedTypeName name="Child"/>
+    <fullyQualifiedTypeName name="Parent"/>
+    <fullyQualifiedTypeName name="javax.print.attribute.standard.PrinterName"/>
+    <fullyQualifiedTypeName name="Point3DTest"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="ColorPoint"/>
+    <fullyQualifiedTypeName name="javax.security.auth.x500.X500Principal"/>
+    <fullyQualifiedTypeName name="Point2D"/>
+    <fullyQualifiedTypeName name="Point"/>
 </qualifiedTypeNameHistroy>

@@ -1,4 +1,3 @@
-import java.security.AccessControlContext;
 
 /* 
 	클래스 내부의 멤버변수 초기화 방법 (멤버변수에 값을 저장하는 방법)
