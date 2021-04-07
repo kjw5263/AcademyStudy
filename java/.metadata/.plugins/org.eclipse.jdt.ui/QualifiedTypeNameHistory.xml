@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.awt.desktop.PrintFilesEvent"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="lib.A"/>
-    <fullyQualifiedTypeName name="java.time.Year"/>
-    <fullyQualifiedTypeName name="Test"/>
-    <fullyQualifiedTypeName name="java.rmi.server.RemoteStub"/>
-    <fullyQualifiedTypeName name="Student"/>
-    <fullyQualifiedTypeName name="AAA"/>
-    <fullyQualifiedTypeName name="Product"/>
-    <fullyQualifiedTypeName name="Customer"/>
-    <fullyQualifiedTypeName name="AreaMath"/>
     <fullyQualifiedTypeName name="PerimeterMath"/>
     <fullyQualifiedTypeName name="javax.swing.text.StyleContext.SmallAttributeSet"/>
     <fullyQualifiedTypeName name="SimpleMath"/>
@@ -32,7 +20,6 @@
     <fullyQualifiedTypeName name="javax.security.auth.x500.X500Principal"/>
     <fullyQualifiedTypeName name="Point2D"/>
     <fullyQualifiedTypeName name="Point"/>
-    <fullyQualifiedTypeName name="A"/>
     <fullyQualifiedTypeName name="java.net.http.HttpResponse.BodySubscriber"/>
     <fullyQualifiedTypeName name="BB"/>
     <fullyQualifiedTypeName name="AA"/>
@@ -50,14 +37,27 @@
     <fullyQualifiedTypeName name="A1"/>
     <fullyQualifiedTypeName name="A2"/>
     <fullyQualifiedTypeName name="B2"/>
-    <fullyQualifiedTypeName name="B"/>
     <fullyQualifiedTypeName name="D"/>
     <fullyQualifiedTypeName name="E"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="F"/>
     <fullyQualifiedTypeName name="G"/>
     <fullyQualifiedTypeName name="H"/>
     <fullyQualifiedTypeName name="I"/>
     <fullyQualifiedTypeName name="java.security.PublicKey"/>
     <fullyQualifiedTypeName name="java.lang.Void"/>
+    <fullyQualifiedTypeName name="Employee"/>
+    <fullyQualifiedTypeName name="Person"/>
+    <fullyQualifiedTypeName name="Man"/>
+    <fullyQualifiedTypeName name="Manager"/>
+    <fullyQualifiedTypeName name="A"/>
+    <fullyQualifiedTypeName name="B"/>
+    <fullyQualifiedTypeName name="Car"/>
+    <fullyQualifiedTypeName name="HybridCar"/>
+    <fullyQualifiedTypeName name="java.net.NoRouteToHostException"/>
+    <fullyQualifiedTypeName name="HybridWaterCar"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="TV.CaptionTV"/>
+    <fullyQualifiedTypeName name="java.awt.geom.Point2D"/>
+    <fullyQualifiedTypeName name="CaptionTV"/>
+    <fullyQualifiedTypeName name="TV"/>
 </qualifiedTypeNameHistroy>
