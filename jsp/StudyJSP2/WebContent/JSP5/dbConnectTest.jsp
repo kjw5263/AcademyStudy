@@ -27,7 +27,7 @@
 		// Test Connection만 해본 것임!
 		//DriverManager.getConnection("jdbc:mysql://localhost:3306/jspdb", "root", "1234");
 		
-		// --> 연결을 유지하고 싶다면?
+		// --> 연결을 유지하고 싶다면? conn 변수에 저장하여 유지시키기
 		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/jspdb", "root", "1234");
 		
 		System.out.println(conn);

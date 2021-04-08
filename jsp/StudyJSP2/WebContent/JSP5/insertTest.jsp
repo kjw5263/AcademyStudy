@@ -1,3 +1,5 @@
+
+<%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="java.sql.DriverManager"%>
@@ -32,20 +34,61 @@
 	
 		
 		//3단계. SQL 구문 작성 & statement객체 생성(->preparedstatement 변경 예정)
-		//String sql = "insert into itwill_member (name, gender, age, jumin) values('테스트', '남',10, '100110-1111111')";
-		String sql = "insert into itwill_member (name, gender, age, jumin) values('"+name+"', '"+gender+"', "+age+", '"+jumin+"')";
-		// 아까 연결했던 정보를 가지고 준비를 한당
-		// Statement : SQL구문을 실행하는 객체
-		Statement stmt = conn.createStatement();
 		
+		// 1번 케이스) 하지만 하드코딩 하면 똑같은 데이터가 중복으로 DB에 들어간다->변수를 사용하자
+		// String sql = "insert into itwill_member (name, gender, age, jumin) values('테스트', '남',10, '100110-1111111')";
+		
+		// 2번 케이스) statement를 사용하면 복잡하고, 어려워진다!
+		// String sql = "insert into itwill_member (name, gender, age, jumin) values('"+name+"', '"+gender+"', "+age+", '"+jumin+"')";
+		
+		// 3번 케이스)
+		String sql = "insert into itwill_member (name, gender, age, jumin) values(?,?,?,?)";
+		
+		
+		// 아까 연결했던 정보를 가지고, DB 쿼리를 실행할 준비를 한다.
+		// 2번 케이스 사용시) Statement : SQL구문을 실행하는 객체
+		//Statement stmt = conn.createStatement();
 		
 		// 4단계. SQL 구문을 실행 
-		stmt.executeUpdate(sql);
+		//stmt.executeUpdate(sql);
+		
+		//pstmt.executeUpdate();
+		// -> insert, update, delete 구문 실행시
+		//pstmt.executeQuery();
+		// -> select 구문 실행시 사용
+		
+		// 3번 케이스 사용시) PreparedStatement 클래스 말고 인터페이스 사용해야함
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+		
+		/* 바로 실행할 수 없음 -> ?를 채워주어야 한다! */
+		// 	XXXXX는 컬럼의 데이터 타입에 따라서 변경한다.
+		// pstmt.setXXXXX(parameterIndex, 저장할 값);
+		pstmt.setString(1, name);
+		pstmt.setString(2, gender);
+		pstmt.setInt(3, age);
+		pstmt.setString(4, jumin);
+		
+		pstmt.executeUpdate();
+		
+		
+		
+		/*
+			Statement : SQL 구문을 실행하는 객체
+			PreparedStatement : SQL 구문을 실행하는 객체
+			* 차이점? -> 쿼리문을 실행할 준비가 되어있는 상태(Statement에 비해 처리속도 우수, 보안상 우수)
+		
+		*/
+		
+		
 		
 		System.out.println(" 디비 정보 저장완료! ");
 		
 		
-		// 하지만 하드코딩 하면 똑같은 데이터가 중복으로 DB에 들어간다->변수를 사용하자
+		
+		
+		
+		
+		
 	%>
 </body>
 </html>
