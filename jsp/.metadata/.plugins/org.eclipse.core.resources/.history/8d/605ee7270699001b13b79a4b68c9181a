@@ -1,0 +1,40 @@
+package com.itwillbs.test;
+
+public class Main {
+	public static void main(String[] args){
+		ItwillBean ib = new ItwillBean();
+		System.out.println(ib.toString());	
+		System.out.println(ib);
+		System.out.println("==============================");
+		
+		// 객체 생성 없이 학생 한명의 정보를 생성 후
+		// 학생의 정보 출력, 점수의 총합, 평균 계산 후 출력 
+		String name="홍길동";
+		String tel="010-1234-1234";
+		int kor=75;
+		int eng=100;
+		int math=80;
+		
+		
+		
+		
+		
+		
+		// 메소드 생성 showInfo() : 이름과 전화번호 출력
+		// 			showScore() : 총합, 평균 출력
+		showInfo(name, tel);
+		showScore(kor, eng, math);
+		
+		
+	}
+
+	private static void showScore(int kor, int eng, int math) {
+		int sum = kor + eng + math;
+		int avg = sum/3;
+		System.out.println("총합 : " + sum + "  평균 : " + avg);
+	}
+
+	private static void showInfo(String name, String tel) {
+		System.out.println("이름 : " + name + "  전화번호 : "+ tel);
+	}
+}

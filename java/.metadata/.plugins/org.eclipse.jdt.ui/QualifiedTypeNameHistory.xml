@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="PerimeterMath"/>
-    <fullyQualifiedTypeName name="javax.swing.text.StyleContext.SmallAttributeSet"/>
-    <fullyQualifiedTypeName name="SimpleMath"/>
-    <fullyQualifiedTypeName name="SimpleMath1"/>
-    <fullyQualifiedTypeName name="AreaMath1"/>
-    <fullyQualifiedTypeName name="PerimeterMath1"/>
-    <fullyQualifiedTypeName name="java.security.AccessControlContext"/>
     <fullyQualifiedTypeName name="InitTest"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="Test74"/>
     <fullyQualifiedTypeName name="javax.swing.plaf.basic.BasicSplitPaneUI.BasicVerticalLayoutManager"/>
     <fullyQualifiedTypeName name="Init"/>
     <fullyQualifiedTypeName name="Product2"/>
-    <fullyQualifiedTypeName name="Child"/>
-    <fullyQualifiedTypeName name="Parent"/>
     <fullyQualifiedTypeName name="Point3DTest"/>
     <fullyQualifiedTypeName name="ColorPoint"/>
     <fullyQualifiedTypeName name="javax.security.auth.x500.X500Principal"/>
@@ -28,7 +19,6 @@
     <fullyQualifiedTypeName name="java.nio.channels.NonReadableChannelException"/>
     <fullyQualifiedTypeName name="Super"/>
     <fullyQualifiedTypeName name="Sub"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.rmi.activation.ActivationGroup_Stub"/>
     <fullyQualifiedTypeName name="PA.A"/>
     <fullyQualifiedTypeName name="PB.B"/>
@@ -55,9 +45,19 @@
     <fullyQualifiedTypeName name="HybridCar"/>
     <fullyQualifiedTypeName name="java.net.NoRouteToHostException"/>
     <fullyQualifiedTypeName name="HybridWaterCar"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="TV.CaptionTV"/>
     <fullyQualifiedTypeName name="java.awt.geom.Point2D"/>
     <fullyQualifiedTypeName name="CaptionTV"/>
     <fullyQualifiedTypeName name="TV"/>
+    <fullyQualifiedTypeName name="Parent1"/>
+    <fullyQualifiedTypeName name="Child2"/>
+    <fullyQualifiedTypeName name="C"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="Line"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="DObject"/>
+    <fullyQualifiedTypeName name="Child1"/>
+    <fullyQualifiedTypeName name="Child"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="Parent"/>
 </qualifiedTypeNameHistroy>

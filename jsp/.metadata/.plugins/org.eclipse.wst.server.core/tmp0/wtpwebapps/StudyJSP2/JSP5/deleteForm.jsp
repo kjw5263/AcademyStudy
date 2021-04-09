@@ -14,13 +14,13 @@
 	
 	
 	%>
-	<form action="select.jsp" method="post">
+	
+	<form action="deletePro.jsp" method="post">
 			
 		아이디 : <input type="text" name="id"> <br>
 		비밀번호 : <input type="password" name="pw"> <br>
-		수정된 이메일 : <input type="text" name="email"> <br>
 	
-	<input type="submit" value="수정하기"> 
+	<input type="submit" value="삭제하기"> 
 	
 	</form>
 </body>

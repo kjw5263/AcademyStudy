@@ -12,7 +12,6 @@
 	<h2> 전달된 파라미터값을 저장 후 출력 </h2>
 	<%
 		String id = request.getParameter("id");
-	
 	%>
 	
 	아이디 : <%=id %><br>

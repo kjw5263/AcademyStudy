@@ -1,0 +1,23 @@
+package com.itwillbs.test;
+
+public class Calc {
+	private int kor;
+	private int eng;
+	private int math;
+	
+	Calc() {
+		
+	}
+	
+	int SUM(int kor, int eng, int math){
+		this.kor = kor;
+		this.eng = eng;
+		this.math = math;
+		
+		return kor+eng+math;
+	}
+	
+	void AVG(){
+		System.out.println(SUM(kor, eng, math)/3);
+	}
+}
