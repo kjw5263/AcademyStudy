@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+body {
+	line-height: 1.8;
+	color: #333;
+}
+h1 { text-decoration: underline; }
+
+#basic {
+	background-color:skyblue;
+	width: 500px;
+	margin: 1em auto;
+	padding: 0.1em;
+}
+
+.box { border: 2px dashed;
+	color: #333;
+}

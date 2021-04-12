@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="InitTest"/>
-    <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="Test74"/>
     <fullyQualifiedTypeName name="javax.swing.plaf.basic.BasicSplitPaneUI.BasicVerticalLayoutManager"/>
     <fullyQualifiedTypeName name="Init"/>
@@ -54,10 +52,12 @@
     <fullyQualifiedTypeName name="C"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="Line"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="DObject"/>
     <fullyQualifiedTypeName name="Child1"/>
     <fullyQualifiedTypeName name="Child"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="Parent"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>
