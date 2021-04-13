@@ -1,27 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="Test74"/>
-    <fullyQualifiedTypeName name="javax.swing.plaf.basic.BasicSplitPaneUI.BasicVerticalLayoutManager"/>
-    <fullyQualifiedTypeName name="Init"/>
-    <fullyQualifiedTypeName name="Product2"/>
-    <fullyQualifiedTypeName name="Point3DTest"/>
-    <fullyQualifiedTypeName name="ColorPoint"/>
-    <fullyQualifiedTypeName name="javax.security.auth.x500.X500Principal"/>
-    <fullyQualifiedTypeName name="Point2D"/>
-    <fullyQualifiedTypeName name="Point"/>
-    <fullyQualifiedTypeName name="java.net.http.HttpResponse.BodySubscriber"/>
-    <fullyQualifiedTypeName name="BB"/>
-    <fullyQualifiedTypeName name="AA"/>
-    <fullyQualifiedTypeName name="javax.swing.DefaultBoundedRangeModel"/>
-    <fullyQualifiedTypeName name="javax.print.attribute.standard.PrinterName"/>
-    <fullyQualifiedTypeName name="java.nio.channels.NonReadableChannelException"/>
-    <fullyQualifiedTypeName name="Super"/>
-    <fullyQualifiedTypeName name="Sub"/>
-    <fullyQualifiedTypeName name="java.rmi.activation.ActivationGroup_Stub"/>
-    <fullyQualifiedTypeName name="PA.A"/>
-    <fullyQualifiedTypeName name="PB.B"/>
-    <fullyQualifiedTypeName name="B1"/>
-    <fullyQualifiedTypeName name="C1"/>
     <fullyQualifiedTypeName name="A1"/>
     <fullyQualifiedTypeName name="A2"/>
     <fullyQualifiedTypeName name="B2"/>
@@ -39,7 +17,6 @@
     <fullyQualifiedTypeName name="Manager"/>
     <fullyQualifiedTypeName name="A"/>
     <fullyQualifiedTypeName name="B"/>
-    <fullyQualifiedTypeName name="Car"/>
     <fullyQualifiedTypeName name="HybridCar"/>
     <fullyQualifiedTypeName name="java.net.NoRouteToHostException"/>
     <fullyQualifiedTypeName name="HybridWaterCar"/>
@@ -50,7 +27,6 @@
     <fullyQualifiedTypeName name="Parent1"/>
     <fullyQualifiedTypeName name="Child2"/>
     <fullyQualifiedTypeName name="C"/>
-    <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="Line"/>
     <fullyQualifiedTypeName name="DObject"/>
     <fullyQualifiedTypeName name="Child1"/>
@@ -58,6 +34,30 @@
     <fullyQualifiedTypeName name="Parent"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="취객"/>
+    <fullyQualifiedTypeName name="해장국"/>
+    <fullyQualifiedTypeName name="뼈다귀해장국"/>
+    <fullyQualifiedTypeName name="콩나물해장국"/>
+    <fullyQualifiedTypeName name="AbstractClass"/>
+    <fullyQualifiedTypeName name="MiddleClass"/>
+    <fullyQualifiedTypeName name="SubClass"/>
+    <fullyQualifiedTypeName name="Sub"/>
+    <fullyQualifiedTypeName name="Circle"/>
+    <fullyQualifiedTypeName name="ShapeClass1"/>
+    <fullyQualifiedTypeName name="Rect1"/>
+    <fullyQualifiedTypeName name="Tria1"/>
+    <fullyQualifiedTypeName name="Calculator"/>
+    <fullyQualifiedTypeName name="GoodCalc"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="Animal"/>
+    <fullyQualifiedTypeName name="Cat"/>
+    <fullyQualifiedTypeName name="javax.swing.AbstractAction"/>
+    <fullyQualifiedTypeName name="Clock"/>
+    <fullyQualifiedTypeName name="Car"/>
+    <fullyQualifiedTypeName name="Unit"/>
+    <fullyQualifiedTypeName name="Movable"/>
+    <fullyQualifiedTypeName name="Attactable"/>
+    <fullyQualifiedTypeName name="Fightable"/>
 </qualifiedTypeNameHistroy>
