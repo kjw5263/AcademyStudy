@@ -1,0 +1,11 @@
+package com.itwillbs.board.BoardBean;
+
+public class BoardBean {
+	// itwill_board 테이블의 정보를 저장하는 자바빈 객체
+	// Board DTO (Data Transfer Object)  : 게시판 정보를 옮기는 객체
+	private int num;
+	private String name;
+	private String pass;
+	private String subject;
+	private String content;
+}

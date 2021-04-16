@@ -1,8 +1,0 @@
-package com.itwillbs.test;
-
-public class Main {
-	public static void main(String[] args){
-		ItwillBean ib = new ItwillBean();
-		System.out.println(ib.toString());	
-	}
-}

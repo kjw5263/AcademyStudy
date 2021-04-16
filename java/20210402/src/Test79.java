@@ -1,4 +1,3 @@
-import javax.print.attribute.standard.PrinterName;
 
 /*
 	주제 : 코드를 재활용하는 상속의 장점

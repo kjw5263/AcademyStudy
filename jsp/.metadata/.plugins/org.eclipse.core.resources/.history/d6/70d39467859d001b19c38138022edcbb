@@ -1,0 +1,25 @@
+class Parent {
+	public void pprn() {
+		System.out.println("부모-pprn()");
+	}
+}
+
+class Child extends Parent{
+	public void cprn() {
+		System.out.println("자식-cprn()");
+	}
+}
+
+
+public class Test2 {
+
+	public static void main(String[] args) {
+		Child c = new Child();
+		c.pprn();
+		
+		Parent p = new Parent();
+		p.pprn();
+		
+	}
+
+}

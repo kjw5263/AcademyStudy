@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="C"/>
-    <fullyQualifiedTypeName name="Line"/>
-    <fullyQualifiedTypeName name="DObject"/>
-    <fullyQualifiedTypeName name="Child1"/>
-    <fullyQualifiedTypeName name="Child"/>
-    <fullyQualifiedTypeName name="Parent"/>
-    <fullyQualifiedTypeName name="java.lang.Math"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.lang.Override"/>
-    <fullyQualifiedTypeName name="취객"/>
-    <fullyQualifiedTypeName name="해장국"/>
-    <fullyQualifiedTypeName name="뼈다귀해장국"/>
     <fullyQualifiedTypeName name="콩나물해장국"/>
     <fullyQualifiedTypeName name="AbstractClass"/>
     <fullyQualifiedTypeName name="MiddleClass"/>
@@ -23,7 +11,6 @@
     <fullyQualifiedTypeName name="Tria1"/>
     <fullyQualifiedTypeName name="Calculator"/>
     <fullyQualifiedTypeName name="GoodCalc"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="Animal"/>
     <fullyQualifiedTypeName name="Cat"/>
     <fullyQualifiedTypeName name="javax.swing.AbstractAction"/>
@@ -45,7 +32,6 @@
     <fullyQualifiedTypeName name="VCR"/>
     <fullyQualifiedTypeName name="X"/>
     <fullyQualifiedTypeName name="B"/>
-    <fullyQualifiedTypeName name="A"/>
     <fullyQualifiedTypeName name="HTMLParser"/>
     <fullyQualifiedTypeName name="XMLParser"/>
     <fullyQualifiedTypeName name="Parsable"/>
@@ -58,6 +44,20 @@
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="GroundUnit"/>
     <fullyQualifiedTypeName name="Marine"/>
-    <fullyQualifiedTypeName name="Unit"/>
     <fullyQualifiedTypeName name="AirUnit"/>
+    <fullyQualifiedTypeName name="Test"/>
+    <fullyQualifiedTypeName name="Test74"/>
+    <fullyQualifiedTypeName name="Test75"/>
+    <fullyQualifiedTypeName name="A"/>
+    <fullyQualifiedTypeName name="Ex"/>
+    <fullyQualifiedTypeName name="Consummer"/>
+    <fullyQualifiedTypeName name="Child"/>
+    <fullyQualifiedTypeName name="Parent"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="Point2D"/>
+    <fullyQualifiedTypeName name="Point3DNew"/>
+    <fullyQualifiedTypeName name="Unit"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="P1"/>
 </qualifiedTypeNameHistroy>

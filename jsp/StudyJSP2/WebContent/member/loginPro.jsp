@@ -58,6 +58,10 @@
  			
  			// 로그인 성공의 의미로, 회원 아이디 정보를 session내장 객체에 저장하기
  			session.setAttribute("id", mb.getId());
+ 			// mb.getId()는 String타입이지만, setAttribute의 value부분에는 Object형이 들어가야함
+ 			// ---> 업캐스팅 된다!
+ 			
+ 			
  			// main.jsp 페이지로 이동(2가지 경우)
  			// response.sendRedirect("main.jsp");
  			%>

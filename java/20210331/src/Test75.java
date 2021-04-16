@@ -49,10 +49,13 @@ public class Test75 {
 	
 	
 	public static void main(String[] args) {
-		for(int i=0; i<Test75.arr.length; i++) {
-			System.out.println("arr["+i+"] : " + arr[i]);
-		}
+//		for(int i=0; i<Test75.arr.length; i++) {
+//			System.out.println("arr["+i+"] : " + arr[i]);
+//		}
 
+		for(int i : Test75.arr) {
+			System.out.println(arr[i]);
+		}
 	}
 
 }
