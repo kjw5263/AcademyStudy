@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- style.css 수업시간 공용 css스타일 파일 -->
+<link href="style.css" rel="stylesheet">
+<link href="font.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Maven+Pro&family=Permanent+Marker&family=Zen+Dots&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<h1>font</h1>
+<ul>
+  <li>font-size: ; 글자 크기</li>
+  <li>font-weight: ; 글자 두께</li>
+  <li>font-style: ; 글자 기울기</li>
+  <li>font-family: ; 글꼴(서체)</li>
+</ul>
+
+
+<!-- section : 주제별로 구분하기 -->
+<section id="sec01">
+  <h2>font-size: ; 글자 크기</h2>
+  
+  
+  <p class="fs01">font-size:16px; 기본 글자 크기</p>
+  <p class="fs02">font-size:12px; 작은 글자 크기 </p>
+  <p class="fs03">font-size:20px; 큰 글자 크기 </p>
+  <p class="fs04">font-size:1em; <br>
+     em-상위 요소 크기에 영향 받으며 비례함 <br>
+     (일반적으로 1em=16px이지만, 상위요소 크기 달라지면 같이 변함 ) </p>
+  <p class="fs05">font-size:0.5em; </p>
+  <p class="fs06">font-size:1.5em; </p>
+  <p class="fs07">font-size:1rem; <br>
+  	 rem-최상위 요소(html) 크기에 영향 받음 <br>
+  	 (항상 1rem=16px, 상위 요소의 크기가 달라져도 변함 없음)</p>
+  <p class="fs08">font-size:0.75rem; 고정적이므로 글자 크기를 예측하기 쉽다, root(html) 글자 크기가 바껴야 바뀜</p>
+</section>
+
+
+
+<section id="sec02">
+  <h2>font-weight: ; 글자 두께</h2>
+  
+ 
+  <p class="fw01">font-weight:100; 기본 글자 크기</p>
+  <p class="fw02">font-weight:200; 작은 글자 크기 </p>
+  <p class="fw03">font-weight:300; 큰 글자 크기 </p>
+  <p class="fw04">font-weight:400;</p>
+  <p class="fw05">font-weight:500; </p>
+  <p class="fw06">font-weight:600; </p>
+  <p class="fw07">font-weight:700;</p>
+  <p class="fw08">font-weight:800;</p>
+  <p class="fw09">font-weight:900;</p>
+  <p>
+    font-weight: <span class="fw-b">bold</span>;
+  글자 <span class="fw-b">두께</span></p>
+  <h3>tag h3 <span>font-weight:normal;</span> 글자두께</h3>
+  <b class="fw-n">tag b</b> font-weight:normal; 글자 두께
+</section>
+
+
+<section id="sec03">
+ <h2>font-style: ; 글자 기울기</h2>
+ <p class="fst01">font-style:italic; 글자 기울기 </p>
+ <p class="fst02">font-style:oblique; 글자 기울기 </p>
+ <i>tag i</i> <br> <!-- 원래부터 기울어진 친구들 -->
+ <em>tag em</em> <br>
+
+</section>
+
+
+
+<section id="sec04">
+  <h2> font-family: ; 글꼴(서체)</h2>
+  <p class="ffm01">font-family: "Helvatica", "Verdana", sans-serif;  글꼴(서체) </p>
+  <p class="ffm02">font-family: "Garamond", "Times New Roman", "Georgia", serif; 글꼴(서체) </p>
+  <p class="ffm03">font-family: "Lucida Console", Arial, Fantasy; 글꼴(서체) </p>
+  <p class="ffm04">font-family: 'Anton', sans-serif; 글꼴(서체) </p>
+  <p class="ffm05">font-family: <span>'Zen Dots',</span> cursive; 글꼴(서체) </p>
+  <p class="ffm06">font-<span>family:</span>'Permanent Marker', cursive;; 글꼴(서체) </p>
+  <p class="ffm07">font-family: ; 글꼴(서체) </p>
+  <p class="ffm08">font-family: ; 글꼴(서체) </p>
+  <p class="ffm09">font-family: ; 글꼴(서체) </p>
+  <!-- fonts.google.com -->
+  
+  <pre style="font-family:sans-serif; background-color: #eff">
+  1. https://fonts.google.com에 접속하여 
+  글꼴 종류를 선택하거나 언어를 선택하여 원하는 서체를 고르기
+  
+  2. 골라놓은 서체를 적용할 소스(회색박스) 중 태그 부분을 복사하여 
+  html 문서 head안에 붙여넣기
+  
+  3. 소스(회색박스)중 css 부분을 복사하여 css가 있는 곳에 주석으로 붙여넣기
+  
+  4. 서체를 활용할 선택자에 (font-family...) 부분을 붙여넣기
+  
+  </pre>
+  
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
