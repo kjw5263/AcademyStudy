@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<context>
+	<Resource>
+		name=""
+		auth=""
+		type=""
+		driverClassName=""
+		userName=""
+		password=""
+		url=""
+		maxWait=""
+	</Resource>
+</context>

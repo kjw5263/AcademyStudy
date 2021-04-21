@@ -1,29 +1,30 @@
+import java.util.ArrayList;
+
+class Arr {
+    public int[] solution(int[] numbers) {
+        int[] answer = {};
+        ArrayList arrayList = new ArrayList();
+        int sum = 0;
+        for (int i=0; i<numbers.length; i++){
+            for (int j=0; j<numbers.length; j++){
+                if( i != j ) {
+                	sum = numbers[i] + numbers[j];
+                	arrayList.add(sum);
+                	
+                }
+            }
+        }
+        return answer;
+    }
+}
+
 
 public class Solution {
 
 	public static void main(String[] args) {
-		int a=3;
-		int b=3;
-		int sum=0;
-		long answer = 0;
-		int count = Math.abs(a-b);
-        
-        if(a > b) {
-        	for(int i=0; i < count ; i++) {
-            	sum += (b + i);
-        	}
-        	sum += a;
-        	System.out.println(sum);
-        } else if ( b < a) {
-        	for(int i=0; i < count ; i++) {
-            	sum += (a + i);
-        	}
-        	sum += b;
-        	System.out.println(sum);
-        } else if ( a == b) {
-        	answer = a;
-        	System.out.println(a);
-        }
+		Arr arr = new Arr();
+		int[] bb = {1,2,3,4,5};
+		arr.solution(bb);
         
 	}
 

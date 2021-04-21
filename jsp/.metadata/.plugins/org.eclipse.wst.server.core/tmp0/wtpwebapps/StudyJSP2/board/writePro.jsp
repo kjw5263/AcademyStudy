@@ -32,9 +32,12 @@
 		
 		// 글쓰기 기능을 사용
 		bdao.insertBoard(bb);	// 여기서 받는다! 
+		//System.out.println(bdao.toString());
+		//bdao.getConnection();	
+		// getConnection메소드가 public일 시 사용가느, private일 시 접근 못함
 		
-		
-	
+		// 글 쓴 후, 글 목록으로 이동
+		response.sendRedirect("list.jsp");
 	
 	%>
 	
