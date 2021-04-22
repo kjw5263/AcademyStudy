@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -116,7 +117,7 @@ public class BoardDAO {
 			pstmt.setString(4, bb.getSubject());
 			pstmt.setString(5, bb.getContent());
 			pstmt.setInt(6, bb.getReadcount());
-			pstmt.setInt(7, bb.getRe_ref());
+			pstmt.setInt(7, num);	// re_ref에 글번호 num저장
 			pstmt.setInt(8, bb.getRe_lev());
 			pstmt.setInt(9, bb.getRe_seq());
 			pstmt.setString(10, bb.getIp());
@@ -231,21 +232,159 @@ public class BoardDAO {
 	
 	
 	
+	// getBoardList()
+	public ArrayList getBoardList() {
+		// DB에 있는 내용을 -> BoardBean 객체에 저장 -> ArrayList(필통을 여러개 담는 가방 역할)
+		// DB데이터 1row 정보를 BoardBean 저장 -> ArrayList 한칸에 저장
+		
+		// 게시판 글 정보 모두 저장하는 가변길이 배열
+		ArrayList boardListAll = new ArrayList();
+		
+		// 게시판 글 1개의 정보를 저장하는 객체
+		BoardBean bb = null;				
+		//BoardBean bb = new BoardBean();
+		
+		
+		
+		try {
+
+			// 1, 2 드라이버 로드, 디비 연결
+			conn = getConnection();
+			
+			// 3. sql 구문 & pstmt 객체
+			sql = "select * from itwill_board";
+			
+			pstmt = conn.prepareStatement(sql);
+			
+			// 4 sql 실행
+			rs = pstmt.executeQuery();
+			
+			// 5 데이터 처리
+			while(rs.next() ){
+				// DB 데이터 있을 때 bb 객체 생성
+				bb = new BoardBean();
+				
+				// DB 정보 -> Bean 저장
+				bb.setContent(rs.getString("content"));
+				bb.setDate(rs.getDate("date"));
+				bb.setFile(rs.getString("file"));
+				bb.setIp(rs.getString("ip"));
+				bb.setName(rs.getString("name"));
+				bb.setNum(rs.getInt("num"));
+				bb.setPass(rs.getString("pass"));
+				bb.setRe_lev(rs.getInt("re_lev"));
+				bb.setRe_ref(rs.getInt("re_ref"));
+				bb.setRe_seq(rs.getInt("re_seq"));
+				bb.setReadcount(rs.getInt("readcount"));
+				bb.setSubject(rs.getString("subject"));
+				
+				
+				// Bean -> ArrayList 한칸에 저장
+				boardListAll.add(bb);
+			}
+			
+			System.out.println(" 게시파 모든 정보 저장 완료! ");
+			System.out.println(" 총 " + boardListAll.size()+ " 개 ");
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		} finally {
+			closeDB();
+		}
+		
+		System.out.println(boardListAll);
+		
+		return boardListAll;
+	}
+	// getBoardList()
+	
+
 	
 	
 	
+	//getBoardList(startRow, pageSize)
+	public ArrayList getBoardList(int startRow, int pageSize) {
+		// DB에 있는 내용을 -> BoardBean 객체에 저장 -> ArrayList(필통을 여러개 담는 가방 역할)
+		// DB데이터 1row 정보를 BoardBean 저장 -> ArrayList 한칸에 저장
+		
+		
+		// 게시판 글 정보 모두 저장하는 가변길이 배열
+		ArrayList boardList = new ArrayList();
+		
+		// 게시판 글 1개의 정보를 저장하는 객체
+		BoardBean bb = null;				
+		//BoardBean bb = new BoardBean();
+		
+		
+		
+		try {
+
+			// 1, 2 드라이버 로드, 디비 연결
+			conn = getConnection();
+			
+			// 3. sql 구문 & pstmt 객체
+			// 	글 정보 정렬 - re_ref 값을 최신글 위쪽으로 정렬 (내림차순)
+			// 			 - re_seq 값을 사용 오름차순
+			//			 - limit a, b (a 시작행-1, b개수)
+			// 			ex) 1번글 -> 0번 인덱스
+			
+			//sql = "select * from itwill_board";
+			// sql 문 사이 공백 포함하기 주의!!!!
+			sql = "select * from itwill_board "	
+					+ "order by re_ref desc, re_seq asc "
+					+ "limit ?, ?";
+			
+			pstmt = conn.prepareStatement(sql);
+			
+			// ?
+			pstmt.setInt(1, startRow-1);	// 1번글이면 0번글 
+			pstmt.setInt(2, pageSize);		// pageSize만큼 출력하겟다
+			
+			// 4 sql 실행
+			rs = pstmt.executeQuery();
+			
+			// 5 데이터 처리
+			while(rs.next() ){
+				// DB 데이터 있을 때 bb 객체 생성
+				bb = new BoardBean();
+				
+				// DB 정보 -> Bean 저장
+				bb.setContent(rs.getString("content"));
+				bb.setDate(rs.getDate("date"));
+				bb.setFile(rs.getString("file"));
+				bb.setIp(rs.getString("ip"));
+				bb.setName(rs.getString("name"));
+				bb.setNum(rs.getInt("num"));
+				bb.setPass(rs.getString("pass"));
+				bb.setRe_lev(rs.getInt("re_lev"));
+				bb.setRe_ref(rs.getInt("re_ref"));
+				bb.setRe_seq(rs.getInt("re_seq"));
+				bb.setReadcount(rs.getInt("readcount"));
+				bb.setSubject(rs.getString("subject"));
+				
+				
+				// Bean -> ArrayList 한칸에 저장
+				boardList.add(bb);
+			}
+			
+			System.out.println(" 게시파 모든 정보 저장 완료! ");
+			System.out.println(" 총 " + boardList.size()+ " 개 ");
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		} finally {
+			closeDB();
+		}
+		
+		System.out.println(boardList);
+		
+		return boardList;
+	}
+	//getBoardList(startRow, pageSize);
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	
 	

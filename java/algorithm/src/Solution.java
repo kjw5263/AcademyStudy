@@ -1,20 +1,63 @@
 import java.util.ArrayList;
 
 class Arr {
-    public int[] solution(int[] numbers) {
-        int[] answer = {};
-        ArrayList arrayList = new ArrayList();
-        int sum = 0;
-        for (int i=0; i<numbers.length; i++){
-            for (int j=0; j<numbers.length; j++){
-                if( i != j ) {
-                	sum = numbers[i] + numbers[j];
-                	arrayList.add(sum);
-                	
-                }
-            }
-        }
-        return answer;
+    public String solution(int a, int b) {
+    	String answer = "";
+    	switch(a) {
+    	case 1:
+    		if(b % 7 == 1)
+    			answer = "FRI";
+    		else if(b % 7 == 2)
+    			answer = "SAT";
+    		else if(b % 7 == 3)
+    			answer = "SUN";
+    		else if(b % 7 == 4)
+    			answer = "MON";
+    		else if(b % 7 == 5)
+    			answer = "TUE";
+    		else if(b % 7 == 6)
+    			answer = "WED";
+    		else 
+				answer = "THU";
+			break;
+   
+    	case 2 :
+    		if(b % 7 == 1)
+    			answer ="MON";
+    		else if(b % 7 == 2)
+    			answer = "TUE";
+    		else if(b % 7 == 3)
+    			answer = "WED";
+    		else if(b % 7 == 4)
+    			answer = "THU";
+    		else if(b % 7 == 5)
+    			answer = "FRI";
+    		else if(b % 7 == 6)
+    			answer = "SAT";
+    		else 
+    			answer = "SUN";
+    		break;
+    	case 3 :
+    		if(b % 7 == 1)
+    			answer = "TUE";
+    		else if(b % 7 ==2)
+    			answer = "WED";
+    		else if(b % 7 ==3)
+    			answer = "THU";
+    		else if(b % 7 ==4)
+    			answer = "FRI";
+    		else if(b % 7 ==5)
+    			answer = "SAT";
+    		else if(b % 7 ==6)
+    			answer = "SUN";
+    		else answer = "MON";
+    		break;
+    	case 4 : 
+    		if(b % 7 ==1)
+    			answer = "FRI";
+    		if
+    			
+    	}
     }
 }
 
@@ -22,10 +65,11 @@ class Arr {
 public class Solution {
 
 	public static void main(String[] args) {
+		
 		Arr arr = new Arr();
-		int[] bb = {1,2,3,4,5};
-		arr.solution(bb);
-        
+		System.out.println(arr.solution(5, 24));
+		
+		
 	}
 
 }

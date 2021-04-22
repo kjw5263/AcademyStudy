@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+import java.util.*;
+
+public class ArrayListTest {
+
+	public static void main(String[] args) {
+		// 컬렉션 : 자료구조를 클래스로 구현한 형태, 제네릭
+		// 컬렌션 중 하나인 ArrayList
+		// int[] arr : 고정길이 배열
+		// ArrayList : 가변길이 배열(동적배열) -> 데이터 크기 자동으로 변경
+		//			(list 계열:순서를기억(index), 중복 허용
+		
+		
+		ArrayList arr = new ArrayList();
+		//E : 제네릭 
+		
+		// arr[0] = 100 (X)
+		arr.add(100);
+		arr.add(200);
+		arr.add("Hello");
+		
+		System.out.println(arr);
+		
+		
+		
+		
+		
+
+	}
+
+}
