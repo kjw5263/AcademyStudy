@@ -385,7 +385,70 @@ public class BoardDAO {
 	//getBoardList(startRow, pageSize);
 	
 
+	// updateReadCount(num) 글 조회수 올리기 메소드
+	public void updateReadCount(int num) {
+		
+		try {
+			// 디비연결
+			conn = getConnection();
+			sql = "update itwill_board set readcount = readcount+1 where num=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, num); 	// ? 채우기
+			pstmt.executeUpdate();
+			
+			System.out.println("글 조회수 증가 완료!");
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			closeDB();
+		}
+	}
 	
 	
+	// 글 가져오기 메소드 getBoard()
+	public BoardBean getBoard(int num){
+		BoardBean bb = null;
+		try {
+			// 1,2 디비 연결
+			conn = getConnection();
+			sql = "select * from itwill_board where num=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, num);
+			ResultSet rs = pstmt.executeQuery();
+			
+			
+			if(rs.next()){
+				bb = new BoardBean();
+				bb.setContent(rs.getString("content"));
+				bb.setDate(rs.getDate("date"));
+				bb.setFile(rs.getString("file"));
+				bb.setIp(rs.getString("ip"));
+				bb.setName(rs.getString("name"));
+				bb.setNum(rs.getInt("num"));
+				bb.setPass(rs.getString("pass"));
+				bb.setRe_lev(rs.getInt("re_lev"));
+				bb.setRe_ref(rs.getInt("re_ref"));
+				bb.setRe_seq(rs.getInt("re_seq"));
+				bb.setReadcount(rs.getInt("readcount"));
+				bb.setSubject(rs.getString("subject"));
+				
+				
+			}
+			
+			System.out.println(" 해당 게시물 내용 가져오기 성공! ");
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			closeDB();
+		}
+		
+		
+		
+		return bb;
+	}
+	
+	// 글 가져오기 메소드 getBoard()
 	
 }

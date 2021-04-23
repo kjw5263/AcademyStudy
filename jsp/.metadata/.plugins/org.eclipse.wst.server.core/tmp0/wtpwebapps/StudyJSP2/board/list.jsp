@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>list페이지-기준페이지!</title>
 </head>
 <body>
 	<h1>WebContent/board/list.jsp</h1>
@@ -79,7 +79,11 @@
 	  		%>
 	  			<tr>
 	  				<td><%=bb.getNum() %></td>
-	  				<td><%=bb.getSubject() %></td>
+	  				<td>
+	  				<!-- form 태그를 쓰지 않아도, 링크에 파라미터를 같이 넘겨주면 데이터 받아올수있다 
+	  				게시물을 본 후 돌아왔을 때 첫페이지로 가지 않도록 하기 위해 페이지 넘버도 같이 넘기기-->
+	  					<a href="content.jsp?num=<%=bb.getNum()%>&pageNum=<%=pageNum%>"><%=bb.getSubject() %> </a>
+	  				</td>
 	  				<td><%=bb.getName() %></td>
 	  				<td><%=bb.getDate() %></td>
 	  				<td><%=bb.getReadcount() %></td>
@@ -103,7 +107,7 @@
 			int pageCount = cnt/pageSize + (cnt % pageSize == 0? 0:1);
 			
 			// 한 화면에 보여줄 페이지 번호의 개수 (페이지 블록 )
-			int pageBlock = 5;
+			int pageBlock = 2;
 			
 			// 페이지 블럭의 시작페이지 번호
 			// ex) 1~10 페이지 : 1, 11~20페이지 : 11, 21~20 패이지 : 21
@@ -122,17 +126,29 @@
 			
 			
 			// 이전
+			if(startPage > pageBlock){
+				%>
+				 <a href="list.jsp?pageNum=<%=startPage - pageBlock%>">[이전]</a>
+				
+				<%
+			}
 			
 			
 			// 숫자 1...10
 			for(int i=startPage; i<=endPage; i++){
 				%>
-					<a href="list.jsp?pageNum=<%=i %>"> [ <%=i %> ] </a>
+					<a href="list.jsp?pageNum=<%=i %>"
+						style="text-decoration:none;">[ <%=i %> ] </a>
 				<%
 			}
 			
-			// 다음
-			
+			// 다음 (기존의 페이지 블럭보다 페이지의 수가 많을 때)
+			if(endPage <  pageCount) {
+				%>
+				<a href="list.jsp?pageNum=<%=startPage + pageBlock%>">[다음]</a>
+				<%
+				
+			}
 			
 			
 			
