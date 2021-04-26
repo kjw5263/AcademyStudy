@@ -10,3 +10,143 @@
 #sec01>button {
 	width: 300px;
 }
+
+
+
+.tal05 {
+	text-align : justify;
+}
+
+.tdec01 {
+	text-decoration:overline;
+}
+
+.tdec02 {
+	text-decoration: line-through;
+}
+
+.tdec03 {
+	text-decoration: underline;
+}
+
+.tdec04>a {
+	text-decoration: none;
+}
+.tdec04>a:hover {
+	/* A:hover 는 요소 A에 마우스를 올려쓸 떄의 상태를 지정하는 상태선택자*/
+	text-decoration: underline;
+	font-size:1.3em;
+	color:red;
+}
+
+.tdec04:hover {
+	background-color: #ccc;
+}
+
+
+.tin01{
+	text-indent:50px;
+}
+
+.tin02{
+	text-indent:-50px;
+}
+
+.tin03{
+	text-indent: 1em;
+}
+
+.tin04 {
+	text-indent: 1%;
+}
+
+.tin05:hover {
+	text-indent: 30px;
+}
+
+
+
+#sec03>h2>span {
+	font-size: 0.7em;
+	color: #800;
+}
+
+
+.ttr01 { text-transform: none; }
+.ttr02 { text-transform: lowercase; }
+.ttr03 { text-transform: Uppercase; }
+.ttr04 { text-transform: capitalize;}
+
+
+
+
+#sec04 label {
+	font-weight : bold;
+	text-transform: Uppercase; }
+
+#id:focus {
+	/* A:focus는 input에 포커싱된 상태일 때를 지정하는 선택자 */
+	border:none;
+	outline: none;
+	border-bottom: 4px double blue;
+	color: black;
+	/*background-color: #4de;*/
+}
+
+
+#sec05>p {
+	font-size: 25px;
+	font-weight:bold;
+}
+
+.tsh01 { text-shadow: 4px 4px 4px #555; }
+.tsh02 { text-shadow: 4px 0 0 #555; }
+.tsh03 { text-shadow: 0 4px 0 #555;}
+.tsh04 { text-shadow: 0 0 10px #555; }
+.tsh04 { text-shadow: 0 0 10px #555; }
+.tsh06:hover {
+	text-shadow: 3px 3px 3px #44a;
+	transition:1s;
+}
+.tsh07 { 
+	background-color:#000;
+	padding:0.5em;
+	text-shadow: 0 0 12px #aeffde;
+}
+
+.tsh08 {
+	text-shadow: 3px 30px 3px #556235;
+	transition : 0.5s;
+}
+
+#sec05> input {
+	width :300px;
+	height: 20px;
+	font-size : 17px;
+	margin : 3px;
+	outline : none;
+	border-radius: 10px;
+	border:2px solid darkgreen;
+	margin:10px 10px 10px 10px;
+	padding: 10px 20px 10px 20px;
+	transition : 0.1s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
