@@ -451,4 +451,121 @@ public class BoardDAO {
 	
 	// 글 가져오기 메소드 getBoard()
 	
+	
+	
+	// 글 수정하기 메소드 updateBoard() 
+	public int updateBoard(BoardBean bb) {
+		int check = -1;		// 에러가 생겼을 때 
+		
+		try {
+			// 1,2 디비연결
+			conn = getConnection();
+			// 3 sql 작성(select를 통해 본인확인먼저 하기) & pstmt 객체
+			sql = "select pass from itwill_board where num=?";
+			pstmt = conn.prepareStatement(sql);
+			// 4 sql 실행
+			pstmt.setInt(1, bb.getNum());
+			rs = pstmt.executeQuery();
+			
+			// 5 데이터가 있을 때, 다시 sql update & pstmt
+			if(rs.next()){
+				// 글이 있음
+				if(bb.getPass().equals(rs.getString("pass"))){
+					// 글 수정시 입력된 비밀번호 =? 글 작성시 입력된 비밀버노 (DB) 
+					// 본인글 확인
+					// 3 sql (update-글수정) & pstmt
+					sql = "update itwill_board set subject=?, content=? where num=?";
+					pstmt = conn.prepareStatement(sql);
+					
+					// 4 sql 실행
+					pstmt.setString(1, bb.getSubject());
+					pstmt.setString(2, bb.getContent());
+					pstmt.setInt(3, bb.getNum());
+					
+					check = pstmt.executeUpdate();
+					
+					//check = 1;
+				} else {
+					// 글은 있지만, 비밀번호 잘못 입력했을 때
+					check = 0;
+				}
+			} else {
+				// 글이 없을 때
+				check = -1;		
+			}
+			
+			System.out.println(" 글 수정 완료! " +check);
+			
+		} catch (SQLException e) {
+			System.out.println("글 수정 예외 발생 : " + e.getMessage());
+		} finally {
+			closeDB();
+		}
+		
+		
+		return check;
+	}
+	// r글 수정하기 메소드 updateBoard() 끝
+	
+	
+	
+	
+	
+	public int deleteBoard(BoardBean delBean) {
+		int check = -1;
+		
+		
+		try {
+			// DB 연결
+			conn = getConnection();
+			
+			// SQL 작성 및 pstmt 생성
+			sql = "select pass from itwill_board where num=?";
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, delBean.getNum());
+			
+			// pstmt 실행하기
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()){
+				// 글이 있을 때
+				if(delBean.getPass().equals(rs.getString("pass"))){
+					sql = "delete from itwill_board where num=?";
+					pstmt = conn.prepareStatement(sql);
+					pstmt.setInt(1, delBean.getNum());
+					
+					check = pstmt.executeUpdate();
+					System.out.println("check : " + check);
+				} else {
+					check = 0;
+				}
+			}
+			else {
+				// 글이 없을 때
+				check = -1;
+			}
+			
+		} catch (SQLException e) {
+			System.out.println("글 삭제 예외 발생 : " + e.getMessage());
+		} finally {
+			closeDB();
+		}
+		
+		
+		return check;
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
