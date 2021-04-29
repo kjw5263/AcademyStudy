@@ -27,7 +27,7 @@
 		// 게시판 페이징 처리 : DB에서 원하는 만큼만 글 가져오기
 		
 		// 한페이지당 보여줄 글의 개스
-		int pageSize = 5;
+		int pageSize = 10;
 		
 		// 현 페이지가 몇페이지 인지 확인
 		String pageNum = request.getParameter("pageNum");
@@ -82,6 +82,18 @@
 	  				<td>
 	  				<!-- form 태그를 쓰지 않아도, 링크에 파라미터를 같이 넘겨주면 데이터 받아올수있다 
 	  				게시물을 본 후 돌아왔을 때 첫페이지로 가지 않도록 하기 위해 페이지 넘버도 같이 넘기기-->
+	  				
+	  				<%
+	  					int wid = 0;
+	  					// 답글일 때만 이미지 보이게 하면 됨-> re_lev 가 0보다 크면 답글
+	  					if(bb.getRe_lev() > 0){
+	  						wid = 15 * bb.getRe_lev();
+	  				%>
+	  					<img src="level.gif" height="15" width="<%=wid%>">
+	  					<img src="re.gif">
+	  				<%
+	  					}
+	  				%>
 	  					<a href="content.jsp?num=<%=bb.getNum()%>&pageNum=<%=pageNum%>"><%=bb.getSubject() %> </a>
 	  				</td>
 	  				<td><%=bb.getName() %></td>

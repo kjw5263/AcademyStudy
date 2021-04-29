@@ -560,8 +560,82 @@ public class BoardDAO {
 	
 	
 	
-	
-	
+	// reInsertBoard()
+	public void reInsertBoard(BoardBean bb){
+		int num = 0;
+		try {
+			
+			// 1) 답글 작성 번호 (num) 계산
+			// 1, 2 디비 연결
+			conn = getConnection();
+			
+			// 3 sql 쿼리 & pstmt 객체
+			sql = "select max(num) from itwill_board";
+			
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()){
+				rs.getInt("max(num)");
+				num = rs.getInt(1)+1;	// 쿼리 실행 결과가 max(num) 열 하나밖에 없으므로 1번 행 지정
+				
+				
+			}
+			
+			System.out.println("답글 번호 계산 완료 : " + num);
+			
+			// 2) 답글의 순서 재배치 (정렬)
+			// -> re_ref (같은 그룹) 안에서 re_seq(순서)를 정렬
+			//            " 안에서 기존의 순서값보다 큰값이 있으면 순서를 1증가
+			// 만약 원글의 답글을 단다면 기존의 값은 (ref 0 lev 0 seq 0)
+			sql = "update itwill_board set re_seq = re_seq+1 where re_ref=? and re_seq>? ";
+			
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, bb.getRe_ref()); // ref 0
+			pstmt.setInt(2, bb.getRe_seq()); // seq 0
+			
+			// sql 실행
+			pstmt.executeUpdate();
+			
+			System.out.println("답글 정렬 완료!");
+			
+			// 3) 답글 쓰기
+			sql = "insert into itwill_board (num, name, pass, subject, content, readcount, re_ref, re_lev, re_seq, date, ip, file) "
+					+ "values (?,?,?,?,?,?,?,?,?,now(),?,?)";
+			
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, num);
+			pstmt.setString(2, bb.getName());
+			pstmt.setString(3, bb.getPass());
+			pstmt.setString(4, bb.getSubject());
+			pstmt.setString(5, bb.getContent());
+			pstmt.setInt(6, bb.getReadcount());
+			pstmt.setInt(7, bb.getRe_ref());	// re_ref (원글의 그룹번호)
+			pstmt.setInt(8, bb.getRe_lev()+1);	// 답글달때 생기는것 re_lev + 1 -> 원글 lev 0번에서 +1 되어 1레벨짜리 글이됨
+			pstmt.setInt(9, bb.getRe_seq()+1);	// 답글달때 생기는것 re_seq + 1 -> 원글 seq 0번에서 +1 되어 1레벨짜리 글이됨
+			pstmt.setString(10, bb.getIp());
+			pstmt.setString(11, bb.getFile());
+			
+			pstmt.executeUpdate();
+			
+			System.out.println("업데이트 성공!");
+			
+			
+			// 4) 
+			
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			closeDB();
+		}
+		
+		
+		
+		
+	}
+	// reInsertBoard()
 	
 	
 	
