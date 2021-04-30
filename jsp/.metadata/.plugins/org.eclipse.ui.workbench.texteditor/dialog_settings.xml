@@ -7,6 +7,7 @@
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="package com.movie.boxOffice;"/>
 			<item value="ile"/>
 			<item value="var xhr = new XMLHttpRequest(); var url = &apos;http://api.koreafilm.or.kr/openapi-data2/wisenut/search_api/search_json2.jsp?collection=kmdb_new2&amp;nation=대한민국&apos;); /*URL*/ var queryParams = &apos;?&apos; + encodeURIComponent(&apos;ServiceKey=서비스키&apos;; /*Service Key*/ queryParams += &apos;&amp;&apos; + encodeURIComponent(&apos;val001&apos;) + &apos;=&apos; + encodeURIComponent(&apos;2018&apos;)); /*상영년도*/ queryParams += &apos;&amp;&apos; + encodeURIComponent(&apos;val002&apos;) + &apos;=&apos; + encodeURIComponent(&apos;01&apos;)); /*상영월*/ xhr.open(&apos;GET&apos;, url + queryParams); xhr.onreadystatechange = function () { if (this.readyState == 4) { alert(&apos;Status: &apos;+this.status+&apos;Headers: &apos;+JSON.stringify(this.getAllResponseHeaders())+&apos;Body: &apos;+this.responseText); } }; xhr.send(&apos;&apos;);"/>
 			<item value="&lt;script type=&quot;text/javascript&quot;&gt;"/>

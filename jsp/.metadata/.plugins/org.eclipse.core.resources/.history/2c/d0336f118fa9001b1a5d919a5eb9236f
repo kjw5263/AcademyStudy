@@ -1,0 +1,5 @@
+package com.boxOffice;
+
+public class BoxOfficeResult {
+
+}

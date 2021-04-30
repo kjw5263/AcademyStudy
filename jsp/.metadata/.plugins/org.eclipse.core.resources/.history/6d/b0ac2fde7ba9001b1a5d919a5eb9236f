@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form action="" >
+<legend border="1">로그인(김지원)</legend>
+<table border="1">
+ 
+  <tr>
+  	<td>아이디</td>
+  	<td><input type="text"></td>
+  	<td rowspan="2"><input type="button" value="로그인"></td>
+  </tr>
+  <tr>
+  	<td>비밀번호</td>
+  	<td><input type="text"></td>
+  </tr>
+
+</table>
+
+</form>
+</body>
+</html>
