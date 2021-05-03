@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+#mg-n>li {border: 1px solid red;}
+
+.mg-n01 {margin: 14px; }
+.mg-n02 {margin: 14px 0; }
+.mg-n03 {margin:20px 0 30px 0;}
+.mg-n04 {margin: 30px 40px 50px 60px;}
+
+
+.h2-02 {
+	background-color : #390;
+	border-left: 10px solid;
+	padding: 0.3em;
+	width : 500px;
+	color : #9d4;
+	margin-left:auto;
+	margin-right: auto;
+	/*
+	또는 아래와 같이 줄 수 있다.
+	좌우 margin을 auto로 같게 하면
+	요소가 항상 수평으로 중앙정렬됨
+	
+	margin: 2em auto; */
+}
+
+
+
+
+#mg-d>li {border: 1px solid blue;}
+
+.mg-t {margin-top: 2em;}
+.mg-r {margin-right: 2em;}
+.mg-b {margin-bottom: 2em;}
+.mg-l {margin-left: 2em;}
+
+
+#sec01 {
+	
+}
