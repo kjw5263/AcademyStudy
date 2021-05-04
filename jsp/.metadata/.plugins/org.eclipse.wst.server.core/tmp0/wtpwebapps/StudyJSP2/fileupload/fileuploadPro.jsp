@@ -49,7 +49,11 @@
  	String name = multi.getParameter("name");
  	String subject = multi.getParameter("subject");
  	// String filename = multi.getParameter("filename");  -> 파일명은 이렇게 받아올 수 없어
- 	String filename = multi.getFilesystemName("filename"); 
+ 	
+ 	// -> 서버에 올라가는 이름
+ 	String filename = multi.getFilesystemName("filename");
+ 	
+ 	// 서버에 올라가는 파일이름 아니고, 파일 자체의 이름
  	String oFileName = multi.getOriginalFileName("filename"); 
  	
   %>
@@ -59,6 +63,24 @@
      파일  :	<%= filename%> <br>
    파일(원본) : <%=oFileName %>
   
+  
+  <hr>
+  
+  <form name="fr" action="uploadCheck.jsp" method="post">
+  	<input type="hidden" name="name" value="value">
+  	<input type="hidden" name="subject" value="<%=subject %>">
+  	<input type="hidden" name="filename" value="<%=filename %>">
+  	<input type="hidden" name="oFileName" value="<%=oFileName %>">
+  	
+  	
+  	<!-- 이 버튼없이 submit 할 수 있는 방법이 있을까? -->
+  	<!-- <input type="submit" value="전달하기"> -->
+  
+  
+  </form>
+  
+  
+  <a href="javascript:fr.submit();"> 업로드 확인 페이지로 이동 </a>
   
   
 </body>

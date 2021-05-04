@@ -155,7 +155,9 @@
 
       <Context docBase="D:\workspace_jsp2\jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\workspace_jsp2\jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\StudyJSP2" path="/StudyJSP2" reloadable="true" source="org.eclipse.jst.jee.server:StudyJSP2">
 	<Resource auth="Container " driverClassName="com.mysql.jdbc.Driver" maxWait="5000" name="jdbc/mysqlDB" password="1234" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/jspdb" username="root"/>
-</Context><Context docBase="D:\workspace_jsp2\jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\BootStrap" path="/BootStrap" reloadable="true" source="org.eclipse.jst.jee.server:BootStrap"/><Context docBase="D:\workspace_jsp2\jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\MovieAPI" path="/MovieAPI" reloadable="true" source="org.eclipse.jst.jee.server:MovieAPI"/></Host>
+</Context><Context docBase="D:\workspace_jsp2\jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\MovieAPI" path="/MovieAPI" reloadable="true" source="org.eclipse.jst.jee.server:MovieAPI"/><Context docBase="D:\workspace_jsp2\jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\FunWebJSP2" path="/FunWebJSP2" reloadable="true" source="org.eclipse.jst.jee.server:FunWebJSP2">
+	<Resource auth="Container " driverClassName="com.mysql.jdbc.Driver" maxWait="5000" name="jdbc/mysqlDB" password="1234" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/jspdb" username="root"/>
+</Context></Host>
     </Engine>
   </Service>
 </Server>

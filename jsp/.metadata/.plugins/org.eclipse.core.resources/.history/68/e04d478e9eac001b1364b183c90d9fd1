@@ -1,0 +1,47 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+ <h1>WebContent/fileupload/file_down.jsp </h1>
+ 
+ 
+ <!-- 파일 다운로드 하려면? 1.서버에 저장된 파일 저장폴더를 접근해서, 2.파일을 찾아 꺼내와서, 3.화면에 download로 나타내주기 -->
+ 
+ <%
+ 	// 파라미터값 저장 (filename)
+ 	String filename = request.getParameter("filename");
+ 
+ 	// 서버에 업로드 된 파일명생성 -> 실제 경로 필요해요
+ 	
+ 	// 업로드한 가상 경로
+ 	String savePath = "upload";
+ 	
+ 	// 파일이 업로드 된 경로
+ 	ServletContext ctx = getServletContext();
+ 	String sDownloadPath = ctx.getRealPath(savePath);
+ 	// 서블릿 컨텍스트가 뭔데? 쉽게말하면, 프로젝트 정보
+ 			
+ 			
+ 	System.out.println("upload 폴더의 실제 주소(서버 안에 있는 실제 주소 ) " + sDownloadPath);
+ 	
+ 	// 서버에 업로드된 파일명 생성
+ 	String sFilePath = sDownloadPath + "\\" + filename;
+ 	
+ 	System.out.println("다운로드할 파일 주소 : " + sFilePath);
+ 	
+ 	////////////////////////////////////////////////////
+ 	// * 자바/웹 파일을 업로드, 다운로드 시 파일의 확장자는 중요하지 않음
+ 	//	=> 스트림으로 데이터를 주고받기 때문에 => 해당 파일을 웹에서 표현하는 방식: MIME타입
+ 	//  => 
+ 	
+ 	
+ 	
+ 
+ %>
+</body>
+</html>

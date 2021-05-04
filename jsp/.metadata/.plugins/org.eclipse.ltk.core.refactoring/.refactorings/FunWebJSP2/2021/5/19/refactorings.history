@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;FunWebJSP2/WebContent/inc/footer.jsp&apos; to &apos;bottom.jsp&apos;" description="Rename resource &apos;footer.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/inc/footer.jsp" name="bottom.jsp" stamp="1620114603627" updateReferences="true"/>
+</session>

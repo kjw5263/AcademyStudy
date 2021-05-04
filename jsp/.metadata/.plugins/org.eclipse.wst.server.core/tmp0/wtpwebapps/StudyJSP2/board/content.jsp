@@ -51,7 +51,12 @@
 		</tr>
 		<tr>
 			<td>첨부파일</td>
-			<td colspan="3"></td>
+			<!-- 파일 첨부는 나중에 한다. -->
+			<td colspan="3">
+				<!-- 이런 형식으로 쓰면, 브라우저에서 읽히는 유형이 아닌 경우에만 다운되고, 읽히는 유형은 바로 읽혀버림 -->
+				<%-- <a href="../upload/<%=bb.getFile()%>"><%=bb.getFile() %></a> --%>
+				<a href="../fileupload/file_down.jsp?filename=<%=bb.getFile()%>"><%=bb.getFile() %></a>
+			</td>
 		</tr>
 		<tr>
 			<td>글내용</td>
