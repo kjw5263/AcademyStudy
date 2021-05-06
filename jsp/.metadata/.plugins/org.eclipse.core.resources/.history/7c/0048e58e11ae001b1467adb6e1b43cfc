@@ -1,0 +1,40 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+function btnClick(){
+	//div 객체 가져오기
+	var result = document.getElementById("result"); 	//통신 결과 출력
+	
+	//1. Ajax객체생성
+	var request = new XMLHttpRequest()
+	
+	//2. 요청 준비: request.open('전송방식','url or file',true/false)
+	request.open('get','https://openapi.naver.com/v1/search/movie.xml?query=%EC%A3%BC%EC%8B%9D&display=10&start=1&genre=1',false);		//true: 비동기통신, false:동기통신
+	
+	//3. 데이터 요청: send()
+	request.send();			//실제 통신이 이루어짐
+	
+	//4. 데이터 수신
+	request.onreadystatechange = function(){
+		if(request.readyState==4){			//4: 서버응답완료했다면
+			if(request.status==200){		//200: 성공적으로 응답했다
+				//비동기 통신 성공
+				result.innerHTML = request.responseText;	//응답의 형태를 text로 가져와서-> html 파싱
+			}
+		}
+	}
+}
+</script>
+</head>
+<body>
+
+ <div id="result"></div>
+ <button onclick="btnClick()"></button>
+</body>
+</html>

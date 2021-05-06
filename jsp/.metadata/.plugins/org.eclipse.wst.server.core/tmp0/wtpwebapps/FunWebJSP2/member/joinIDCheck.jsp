@@ -8,8 +8,20 @@
 <title>Insert title here</title>
 <script type="text/javascript">
 
-function clickOn() {
-	document.fr.text = "안녕?";
+
+function idFix() {
+	// 아이디 사용하기 버튼 클릭시 실행
+	// 1) 중복확인창 닫기  2) 선택한 아이디 정보 전달
+	
+	// 중복확인창 -> 회원가입창으로 정보 전달
+	//document.fr.id.value는 회원가입창(부모)이 아닌 현재 페이지를 말하는것!
+	// 팝업창을 열어준 opener(부모)
+	// document.fr.id.value=document.ofr.userid.value;
+	opener.document.fr.id.value = document.ofr.userid.value;
+	
+	// 팝업창 닫기
+	window.close();
+	
 }
 
 </script>
@@ -28,24 +40,20 @@ function clickOn() {
  		out.print("이미 사용중인 입니다.");
  	} else {
  		out.print("사용가능한 아이디");
+ 		%>
+ 			<input type="button" value="아이디 사용하기" onclick="idFix()">
+ 		
+ 		<%
  	}
  %> 
  
  <hr>
- <form action="" method="post" name="ofr">
+ <form action="joinIDCheck.jsp" method="post" name="ofr">
    <input type="text" name="userid" value="<%=id %>">
-   <input type="submit" value="사용하기">
+   <input type="submit" value="중복체크">
  
  
  </form>
- 
- 
- <form action="" name="fr">
- 
- 	<input type="button" value="확인" onclick="clickOn()">
- 
- 	<div class="text" ></div>
- 
- </form>
+
 </body>
 </html>
