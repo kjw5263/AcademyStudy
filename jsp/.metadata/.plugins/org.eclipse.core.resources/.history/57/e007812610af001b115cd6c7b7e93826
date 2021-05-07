@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$.ajax({
+			url:"http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=2623060000",
+			success:function(){
+				alert("비동기방식 페이지 이동 성공");
+			}
+		});
+	})
+</script>
+</head>
+<body>
+	<h1> 날씨정보 (xml) 테스트 </h1>
+</body>
+</html>

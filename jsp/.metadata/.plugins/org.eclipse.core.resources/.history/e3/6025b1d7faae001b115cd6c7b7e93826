@@ -1,0 +1,37 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(document).ready(function(){
+			// 제출 버튼 클릭시(submit 이벤트 발생) -> 요소의 값을 입력했는지 체크
+			$("#my_form").submit(function(){
+				if($("#id").val() == ""){
+					alert("아이디를 입력하세요");
+					$("i#d").focus();
+					return false;
+				}
+			}); // submit 이벤트가 발생했을 때~
+		})
+	});
+
+</script>
+</head>
+<body>
+<h1>WebContent/jsEvent/test3.jsp</h1>
+
+<form action="a.jsp" id="my_form" >
+	<input type="text" placeholder="아이디" name="id">
+	<input type="password" placeholder="비밀번호" name="pw">
+	<input type="password" placeholder="비밀번호 확인" name="pwcheck">
+	<input type="submit" value="제출">
+	
+
+</form>
+</body>
+</html>

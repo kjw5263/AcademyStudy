@@ -138,3 +138,9 @@
 5월 06, 2021 09:28:00.31 [6320:2032:0506/092800.312:ERROR:device_event_log_impl.cc(214)] [09:28:00.311] Bluetooth: bluetooth_adapter_winrt.cc:1072 Getting Default Adapter failed.
 5월 06, 2021 09:37:13.92 [6320:2032:0506/093713.926:ERROR:CONSOLE(17)] "Uncaught (in promise) TypeError: Cannot read property 'filter' of undefined", source: devtools://devtools/bundled/lighthouse/lighthouse.js (17)
 5월 06, 2021 09:37:13.92 [6320:2032:0506/093713.926:ERROR:CONSOLE(17)] "Uncaught (in promise) TypeError: Cannot read property 'filter' of undefined", source: devtools://devtools/bundled/lighthouse/lighthouse.js (17)
+
+5월 07, 2021 09:29:35.54 NEW SESSION
+5월 07, 2021 09:29:35.54 [12264:10916:0507/092935.543:ERROR:device_event_log_impl.cc(214)] [09:29:35.543] Bluetooth: bluetooth_adapter_winrt.cc:1072 Getting Default Adapter failed.
+5월 07, 2021 16:31:35.86 [10600:2244:0507/163135.862:ERROR:device_event_log_impl.cc(214)] [16:31:35.863] Bluetooth: bluetooth_adapter_winrt.cc:1072 Getting Default Adapter failed.
+5월 07, 2021 16:37:35.49 [7392:5548:0507/163735.479:ERROR:device_event_log_impl.cc(214)] [16:37:35.494] Bluetooth: bluetooth_adapter_winrt.cc:1072 Getting Default Adapter failed.
+5월 07, 2021 17:12:23.42 [12212:12912:0507/171223.421:ERROR:device_event_log_impl.cc(214)] [17:12:23.421] Bluetooth: bluetooth_adapter_winrt.cc:1072 Getting Default Adapter failed.

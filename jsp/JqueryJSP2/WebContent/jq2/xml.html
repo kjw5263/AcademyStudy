@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		// xml.jsp 페이지 이동 후 xml 데이터를 가지고와서 (비동기방식)
+		// 해당 페이지에 출력
+		//$.ajax("주소",{});  이형태로 써줘도 된다
+		$.ajax({
+			url:"xml.jsp",
+			success:function(data){
+				//alert(data);
+				console.log(data);
+				
+				// 데이터 가져왔을 때, person태그 정보를 사용해서 화면에 출력
+				$(data).find('person').each(function(){
+					// person 태그에 있는 정보를 가져와서 화면에 출력
+					//alert($(this).find('name').text());  // person태그 내부 태그를 this로 지정, 그에 대한 데이터들
+					var name = $(this).find('name').text();
+					var gender = $(this).find('gender').text();
+					var hobby = $(this).find('hobby').text();
+					
+					// 화면에 출력
+					$('body').append("이름 : "+ name + " / 성별 : " + gender + " / 취미 : " + hobby + "<br>");
+					
+					
+					
+				});
+			}
+		})
+	});
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

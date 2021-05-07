@@ -1,0 +1,40 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+	.high_0{background:yellow;}
+	.high_0{background:orange;}
+	.high_0{background:skyblue;}
+	.high_0{background:pink;}
+	.high_0{background:lightgrey;}
+	
+	
+</style>
+
+<script src="../js/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var col=['yellow', 'orange', 'blue', 'green', 'red'];
+		$('h2').css('background', function(idx){
+			return col[idx];
+		});
+	});
+
+</script>
+</head>
+<body>
+<h1>WebContent/jq/test8.jsp</h1>
+<h2>head-0</h2>
+<h2>head-1</h2>
+<h2>head-2</h2>
+<h2>head-3</h2>
+<h2>head-4</h2>
+
+
+</body>
+</html>

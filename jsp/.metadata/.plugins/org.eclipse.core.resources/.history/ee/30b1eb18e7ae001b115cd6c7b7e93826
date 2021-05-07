@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+	$(function(){
+		// 이벤트 : 사용자가 브라우저에서 행하는 모든 행동
+		
+		// bind("이벤트 종류", 함수); : 이벤트를 등록하는 함수
+		// click이라는 이벤트가 발생하면 function 함수 실행 
+		$('input').bind("click", function() {
+			alert("클릭(J쿼리)");
+		});		
+	});
+
+</script>
+</head>
+<body>
+	<h1>Content/jsEvent/test1.jsp</h1>
+	
+<!-- 	<input type="button" value="버튼" onclick="alert('클릭!')"> -->
+	<input type="button" value="버튼">
+</body>
+</html>
