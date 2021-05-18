@@ -40,3 +40,67 @@ nav a {border: 1px solid blue; }
 .dis-nn {
 	display: none;
 }
+
+
+
+
+
+
+
+
+
+/* display : none; */
+#sec03>div {background-color :yellow;}
+.n02 {display : none;}
+
+.n01:hover+.n02{
+	/* 형제관계 선택자 ㅣ
+		A+B A바로 뒤에 오는 형제 B만을 불러오는 선택자
+		형제관계선택자 A~B는 A의 뒤에 오는 모든 형제 B를 다 불러오는 선택자
+		
+	  */
+	display : block;
+	color : red;
+}
+
+
+#sec03>b {
+	background-color: hotpink;
+}
+.nb03 {
+	display : none;
+}
+
+.nb01:hover~.nb03{
+	display: inline;  /*줄띄어진게 아니기 떄문에 inline으로 해주고, 바로 뒤에잇는 요소가 아니라서 ~로 해주야댐  */
+	font-size : 20px;
+}
+
+
+
+.vis02 {visibility : hidden;}
+.vis01:hover+.vis02 {
+	visibility:visible;
+	background-color : blue;
+	border-left : 6px solid;
+	padding-left : 5px;
+	color : white;
+}
+
+
+.visb03 {visibility : hidden;}
+.visb01:hover~.visb03 {
+	visibility: visible;
+}
+
+
+
+.opa01 { opacity : 0;}
+.opa02 { opacity : 0.3;}
+.opa03 { opacity : 0.5;}
+.opa04 { opacity : 1;}
+
+aside:hover>b {
+	opacity:1;
+	transition:2s;
+}

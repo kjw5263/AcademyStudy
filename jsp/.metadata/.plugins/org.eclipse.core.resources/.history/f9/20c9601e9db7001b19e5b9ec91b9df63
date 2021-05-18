@@ -1,0 +1,7 @@
+package com.itwillbs.myServlet;
+
+import javax.servlet.http.HttpServlet;
+
+public class TestServlet1 extends HttpServlet{
+	
+}

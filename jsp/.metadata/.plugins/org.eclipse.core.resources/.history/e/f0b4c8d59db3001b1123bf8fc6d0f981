@@ -1,0 +1,12 @@
+package com.itwillbs.myBean;
+
+public class MemberDTO {
+	// MemberBean과 동일한 동작을 함
+	// Data Transfer Object
+	
+	private String userName;
+	private String userGender;
+	private String userEmail;
+	
+	
+}

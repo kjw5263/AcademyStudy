@@ -1,0 +1,8 @@
+package com.itwillbs.myServlet;
+
+import javax.servlet.http.HttpServlet;
+
+// http://localhost:8088/ELJSTLJSP2/test1
+public class TestServlet1 extends HttpServlet{
+	
+}

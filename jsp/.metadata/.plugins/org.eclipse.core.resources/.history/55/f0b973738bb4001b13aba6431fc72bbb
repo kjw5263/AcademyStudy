@@ -1,0 +1,43 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>WebContent/el/paramTestPro1.jsp</h1>
+
+<%
+
+	request.setCharacterEncoding("UTF-8");
+	// ID, PW 값을 저장 출력
+	String id = request.getParameter("id");
+	String pw = request.getParameter("pw");
+
+%>
+
+아이디 : ${param.id} <br> <!--  내가 넘겨줄 때 파라미터 이름을 적는다  -->
+비밀번호 : ${param.pw } <br>
+
+
+<%
+	// 좋아하는 음식 2개 저장 후 출력
+	String food1 = request.getParameter("food");
+	String food2 = request.getParameter("food");
+	
+	String[] foods = request.getParameterValues("food");
+	// 취미 3개 출력
+%>
+	음식1 : <%=food1 %> <br>
+	음식2 : <%=food2 %> <br>
+	음식1 : <%=foods[0] %> <br>
+	음식2 : <%=foods[1] %> <br>
+	
+	<hr>
+	취미 : ${param.hobby }<br>
+
+
+</body>
+</html>

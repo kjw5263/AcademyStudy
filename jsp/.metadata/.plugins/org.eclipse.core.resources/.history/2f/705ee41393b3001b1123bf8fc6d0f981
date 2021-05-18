@@ -1,0 +1,44 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>WebContent/jstl/set2.jsp</h1>
+	<%
+	// set1.jsp 에서 전달한 정보 저장 출력
+	// model, name, price
+	// scope로 넘기는 것은 setAttribute로 저장한 후 넘기는 것이기 때문에,
+	// 받을 때 getParameter가 아닌 getAttribute 로 받아야 한다
+	String model = (String)request.getAttribute("model");
+	String name = (String)request.getAttribute("name");
+	int price = (Integer)request.getAttribute("price");
+	
+	
+	
+	
+	%>
+	 
+	<%=model %>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>
