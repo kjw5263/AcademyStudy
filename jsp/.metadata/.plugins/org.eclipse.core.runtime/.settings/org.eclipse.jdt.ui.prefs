@@ -9,7 +9,7 @@ content_assist_disabled_computers=org.eclipse.jdt.ui.textProposalCategory\u0000o
 content_assist_fill_method_arguments=true
 content_assist_guess_method_arguments=false
 content_assist_insert_completion=true
-content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="javax.naming.Context"><rhs name\="javax.naming.InitialContext"/></lhs></history>
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="javax.naming.Context"><rhs name\="javax.naming.InitialContext"/></lhs><lhs name\="com.member.action.Action"><rhs name\="com.member.action.MemberJoinAction"/><rhs name\="com.member.action.MemberLoginAction"/><rhs name\="com.member.action.MemberLogoutAction"/></lhs><lhs name\="com.member.action.MemberJoinAction"><rhs name\="com.member.action.MemberJoinAction"/></lhs><lhs name\="java.util.Date"><rhs name\="java.sql.Timestamp"/></lhs><lhs name\="java.lang.Cloneable"><rhs name\="java.sql.Timestamp"/></lhs><lhs name\="java.sql.Timestamp"><rhs name\="java.sql.Timestamp"/></lhs><lhs name\="com.member.action.ActionForward"><rhs name\="com.member.action.ActionForward"/></lhs></history>
 content_assist_number_of_computers=24
 content_assist_prefix_completion=false
 content_assist_proposals_background=255,255,255

@@ -1,0 +1,16 @@
+package com.member.action;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class MemberLoginAction implements Action{
+	// Actiond을 상속하면, execute 메소드를 반드시 오버라이딩 해야함
+	
+	@Override
+	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	 
+	
+}

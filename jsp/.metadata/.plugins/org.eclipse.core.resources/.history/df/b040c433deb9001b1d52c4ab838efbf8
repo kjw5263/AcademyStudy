@@ -1,0 +1,26 @@
+package com.member.action;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class MemberLoginAction implements Action{
+	// Actiond을 상속하면, execute 메소드를 반드시 오버라이딩 해야함
+	
+	@Override
+	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		System.out.println("M : MemberLoginAction_execute() 실행! ");
+		
+		// COntroller에서 보낸 request,response값들 !
+		// 1. 전달된 값 저장하기 (id/pass)
+		String id = request.getParameter("id");
+		String pass = request.getParameter("pass");
+		// 2. DAO 객체 생성 -> idCheck(id, pass);
+		MemberDAO mdao = new MemberDAO();
+		mdao.idCheck(id, pass);
+		// 3. 결과에 따른 페이지 이동
+		return null;
+	}
+	 
+	
+}
+

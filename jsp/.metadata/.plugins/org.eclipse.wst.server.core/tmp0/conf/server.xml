@@ -159,7 +159,9 @@
 	<Resource auth="Container " driverClassName="com.mysql.jdbc.Driver" maxWait="5000" name="jdbc/mysqlDB" password="1234" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/jspdb" username="root"/>
 </Context><Context docBase="D:\workspace_jsp2\jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\JqueryJSP2" path="/JqueryJSP2" reloadable="true" source="org.eclipse.jst.jee.server:JqueryJSP2"/><Context docBase="D:\workspace_jsp2\jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\MovieProject" path="/MovieProject" reloadable="true" source="org.eclipse.jst.jee.server:MovieProject">
 	<Resource auth="Container " driverClassName="com.mysql.jdbc.Driver" maxWait="5000" name="jdbc/movieDB" password="wldnjs12" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/MovieProject" username="root"/>
-</Context><Context docBase="D:\workspace_jsp2\jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ELJSTLJSP2" path="/ELJSTLJSP2" reloadable="true" source="org.eclipse.jst.jee.server:ELJSTLJSP2"/></Host>
+</Context><Context docBase="D:\workspace_jsp2\jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ELJSTLJSP2" path="/ELJSTLJSP2" reloadable="true" source="org.eclipse.jst.jee.server:ELJSTLJSP2"/><Context docBase="D:\workspace_jsp2\jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ServletJSP2" path="/ServletJSP2" reloadable="true" source="org.eclipse.jst.jee.server:ServletJSP2"/><Context docBase="D:\workspace_jsp2\jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Model2JSP2" path="/Model2JSP2" reloadable="true" source="org.eclipse.jst.jee.server:Model2JSP2">
+	<Resource auth="Container " driverClassName="com.mysql.jdbc.Driver" maxWait="5000" name="jdbc/model2DB" password="1234" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/model2" username="root"/>
+</Context></Host>
     </Engine>
   </Service>
 </Server>

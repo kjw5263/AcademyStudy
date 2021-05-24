@@ -1,0 +1,6 @@
+package com.member.action;
+
+public class MemberUpdateProAction implements Action{
+	
+
+}

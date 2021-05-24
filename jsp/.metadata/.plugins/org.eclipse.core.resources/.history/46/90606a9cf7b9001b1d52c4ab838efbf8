@@ -1,0 +1,15 @@
+package com.member.action;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class MemberInfoAction implements Action{
+
+	@Override
+	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		System.out.println("M : MemberInfoAction_execute() 호출");
+		return null;
+	}
+	
+
+}
