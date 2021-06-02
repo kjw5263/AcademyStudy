@@ -27,9 +27,23 @@
   이름 : <input type="text" name="name" value="${mdto.name }"> <br>
  나이 : <input type="text" name="age" value="${mdto.age }"> <br>
  성별 : <input type="radio" name="gender" value="남" 
- 		<% if(mdto.getGender().equals("남")) %> checked> 남
- 	  <input type="radio" name="gender" value="여"
- 	  <% if(mdto.getGender().equals("여")) %> checked> 여<br>
+         <% 
+           if(mdto.getGender().equals("남")) {
+       	 %> 
+        	 checked="checked" 
+       	 <% 
+       	   } 
+       	 %>
+         > 남
+      <input type="radio" name="gender" value="여" 
+        <% 
+           if(mdto.getGender().equals("여")) {
+       	 %> 
+        	 checked="checked" 
+       	 <% 
+       	   } 
+       	 %>
+      > 여  <br>
  이메일 : <input type="text" name="email" value="${mdto.email }"> <br>
   <hr>
   <input type="submit" value="회원 정보 수정 ">

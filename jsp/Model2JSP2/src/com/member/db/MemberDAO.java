@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -210,9 +212,14 @@ public class MemberDAO {
 			rs = pstmt.executeQuery();
 			
 			if(rs.next()){
-				if(mdto.getPass().equals("pass")){
+				if(mdto.getPass().equals(rs.getString("pass"))){
 					sql ="update itwill_member set email=?, gender=?, name=? , age=? where id=? ";
 					pstmt = conn.prepareStatement(sql);
+					pstmt.setString(1, mdto.getEmail());
+					pstmt.setString(2, mdto.getGender());
+					pstmt.setString(3, mdto.getName());
+					pstmt.setInt(4, mdto.getAge());
+					pstmt.setString(5, mdto.getId());
 					pstmt.executeUpdate();
 					check = 1;
 				}else {
@@ -224,9 +231,11 @@ public class MemberDAO {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			closeDB();
 		}
 		
-		
+		System.out.println(check);
 		return check;
 	}
 	
@@ -234,4 +243,94 @@ public class MemberDAO {
 	
 	
 	
+	
+	
+	
+	public int deleteMember(String id, String pass) {
+		int result = -1;
+		
+		
+		try {
+			// 1,2 디비 연결
+			conn = getConnection();
+			// 3 sql 구문(select), & pstmt 객체 생성
+			sql = "select pass from itwill_member where id=?";
+			pstmt = conn.prepareStatement(sql);
+			// 4 sql 실행
+			// 5 데이터 처리
+			//    3 sql 구문 (delete ) & pstmt 객체
+			//	  4 sql 실행
+
+			pstmt.setString(1, id);
+			
+			rs = pstmt.executeQuery();
+			if(rs.next()){
+				if(pass.equals(rs.getString("pass"))){
+					// 3 sql 구문 (delete) & pstmt 객체
+					sql = "delete from itwill_member where id=?";
+					pstmt = conn.prepareStatement(sql);
+					pstmt.setString(1, id);
+					// 4 sql 실행
+					result = pstmt.executeUpdate();
+				} else {
+					result = 0;
+				}
+			} else {
+				result = -1;
+			}
+			
+			System.out.println("DAO : 회원정보 삭제 완료 ");
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			closeDB();
+		}
+		
+		
+		
+		return result;
+	}
+	
+	
+	// getMemberList()
+	public List getMemberList() {
+		// 업ㅂ캐스팅 하는 이유 
+		// 부모 클래스의 메소드를 사용하거나, 전달했을 때 좀더 쉽게 전달이 가능하기 때문
+		List memberList = new ArrayList();
+		
+		try {
+			// 1,2 디비 연결
+			conn = getConnection();
+			// 3 sql 연결 & pstmt 객체 생성
+			sql = "select * from itwill_member where id != 'admin'";
+			// 4 sql 실행
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			// 5 데이터 처리
+			while(rs.next()) {
+				MemberDTO dto = new MemberDTO();
+				dto.setAge(Integer.parseInt(rs.getString("age")));
+				dto.setEmail(rs.getString("email"));
+				dto.setGender(rs.getString("Gender"));
+				dto.setId(rs.getString("id"));
+				dto.setName(rs.getString("name"));
+				dto.setPass(rs.getString("pass"));
+				dto.setReg_date(rs.getTimestamp("reg_date"));
+				
+				// 리스트 한칸 -> 1명정보 저장 
+				memberList.add(dto);
+			}
+			System.out.println("DAO : 모든 회원 정보 저장 완료 ");
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			closeDB();
+		}
+		
+		
+		return memberList;
+	}
+	// getMemberList()
 }

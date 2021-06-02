@@ -1,8 +1,0 @@
-package com.member.action;
-
-public interface Action {
-	// 변수 사용 X, 상수 사용 O
-	// 메소드 사용 X, 추상 메소드 사용 O
-	
-	public ActionForward execute();
-}

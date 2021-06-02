@@ -1,0 +1,31 @@
+package com.admin.goods.action;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class AdminGoodsModifyFormAction implements Action{
+
+	@Override
+	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		System.out.println("M : AdminGoodsModifyFormAction_execute() 호출 ");
+		
+		
+		// 전달된 파라미터값 num 저장
+		int num = Integer.parserInt(request.getParameter("num"));
+		
+		// DB객체 생성 후 getGoods(num);
+		
+		
+		// 저장
+		
+		// 페이지 이동(admin_goods_modify.jsp)
+		
+		
+		
+		// DB 객체 생성 후 getGoods();
+		return null;
+	}
+	
+	
+
+}

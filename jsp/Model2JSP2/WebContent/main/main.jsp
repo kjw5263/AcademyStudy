@@ -29,7 +29,7 @@
 	<h3> <a href="./MemberUpdate.me"> 회원정보 수정</a></h3>
 
 	
-	<h3> <a href="deleteForm.jsp"> 회원 탈퇴 </a></h3>
+	<h3> <a href="./MemberDelete.me"> 회원 탈퇴 </a></h3>
 	
 	
 	<!-- 아이디가 Null 일 때, NullPointerException 
@@ -40,13 +40,15 @@
 		if(id != null && id.equals("admin")) {
 	%>
 	
-	<h3><a href="list.jsp"> 회원 목록 보기 </a></h3>
+	<h3><a href="./MemberList.me"> 회원 목록 보기 </a></h3>
 	
 	
 	
 	<%
 	}
 	%>
+
+
 
 
 </body>

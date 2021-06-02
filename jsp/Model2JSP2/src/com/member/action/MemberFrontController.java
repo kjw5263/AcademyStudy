@@ -175,6 +175,43 @@ public class MemberFrontController extends HttpServlet{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+		} 
+		
+		else if(command.equals("/MemberDelete.me")){
+			System.out.println("C: /MemberDelete.me 호출");
+			// 정보 입력 -> View -> DB 처리
+			forward = new ActionForward();
+			forward.setPath("./member/deleteForm.jsp");
+			forward.setRedirect(false);
+		}
+		
+		else if(command.equals("/MemberDeleteAction.me")){
+			System.out.println("C : /MemberDeleteAction.me 호출 !");
+			// 정보를 전달받아서 DB에서 삭제
+			// MemberDeleteAction() 객체 생성
+			action = new MemberDeleteAction();
+			
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+		}
+		
+		else if(command.equals("/MemberList.me")){
+			System.out.println("C : /MemberList.me 호출");
+			
+			// DB 사용해서 해당 View 페이지에 출력
+			// MemberListAction() 객체
+			
+			action = new MemberListAction();
+			try {
+				// 컨트롤러가 세가지 어떤 액션을 컨트롤 한다고?
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
 		
 		/******************* 2. 페이지 주소 매핑(연결) *******************/

@@ -2,6 +2,9 @@
 <section name="Workbench">
 	<item value="true" key="J2EE_EXPORT_OVERWRITE"/>
 	<item value="true" key="J2EE_EXPORT_SOURCE"/>
+	<list key="J2EE_IMPORT_null">
+		<item value="C:\Users\ITWILL\Desktop\MovieProject.war"/>
+	</list>
 	<list key="MRU_RUNTIME_STORE">
 		<item value="Apache Tomcat v8.5"/>
 		<item value="NULL_RUNTIME"/>

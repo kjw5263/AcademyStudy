@@ -47,7 +47,7 @@ public class Test implements Runnable {// t스레드 클래스가 아닌 단지 
 		
 		// 위의 작업을 스레드화 작업이라고 한다
 		tt1.start();
-		tt2.start();)
+		tt2.start();
 		
 	}
 

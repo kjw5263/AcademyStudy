@@ -1,0 +1,33 @@
+package com.admin.goods.action;
+
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.admin.goods.db.AdminGoodsDAO;
+
+public class AdminGoodsListAction implements Action {
+
+	@Override
+	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		// 상품 등록 후 넘어오는 화면!!
+		System.out.println("M : AdminGoodsListAction_execute() 호출 ");
+		
+		// AdminGoodsDAO 객체 생성
+		// getGoodsList();
+		
+		AdminGoodsDAO agdao = new AdminGoodsDAO();
+		List goodsList = agdao.getGoodsList();
+		
+		// 결과를 받아왔으니 출력할 정보를 가지고 페이지 이동!!!
+		request.setAttribute("goodsList", goodsList);
+		// 이런식으로 전달 해줄 때는 forward 형식으로 전달해주어야함
+		ActionForward forward = new ActionForward();
+		forward.setPath("./admingoods/admin_goods_list.jsp");
+		forward.setRedirect(false);
+		
+		return null;
+	}
+
+}
