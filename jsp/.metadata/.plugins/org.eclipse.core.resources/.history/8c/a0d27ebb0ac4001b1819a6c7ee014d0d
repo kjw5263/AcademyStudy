@@ -1,0 +1,27 @@
+package com.admin.goods.action;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.admin.goods.db.AdminGoodsDAO;
+
+public class AdminGoodsDeleteAction implements Action {
+
+	@Override
+	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		System.out.println("M : AdminGoodsDeleteAction_execute() 호출");
+		
+		// 해당 상품을 삭제하는 Action
+		// 삭제할 상품 번호 저장 (파라미터값)
+		int num = Integer.parseInt(request.getParameter("num"));
+		
+		// DAO 객체 생성 -DeleteGoods(num)
+		AdminGoodsDAO agdao = new AdminGoodsDAO();
+		agdao.deleteGoods(num);
+		
+		
+		
+		return null;
+	}
+
+}

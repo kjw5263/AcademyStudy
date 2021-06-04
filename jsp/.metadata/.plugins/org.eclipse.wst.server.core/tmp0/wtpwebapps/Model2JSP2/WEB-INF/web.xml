@@ -35,4 +35,30 @@
   	<url-pattern>*.ag</url-pattern>
   </servlet-mapping>
   <!-- adminGoodsFrontController -->
+  
+  
+    <!-- GoodsFrontController -->
+  <servlet>
+  	<servlet-name>GoodsFrontController</servlet-name>
+  	<servlet-class>com.goods.action.GoodsFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>GoodsFrontController</servlet-name>
+  	<url-pattern>*.go</url-pattern>
+  </servlet-mapping>
+  <!-- GoodsFrontController -->
+  
+  
+  <!-- BasketFrontController -->
+  <servlet>
+  	<servlet-name>BasketFrontController</servlet-name>
+  	<servlet-class>com.basket.action.BasketFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>BasketFrontController</servlet-name>
+  	<url-pattern>*.ba</url-pattern>
+  </servlet-mapping>
+  <!-- GoodsFrontController -->
 </web-app>

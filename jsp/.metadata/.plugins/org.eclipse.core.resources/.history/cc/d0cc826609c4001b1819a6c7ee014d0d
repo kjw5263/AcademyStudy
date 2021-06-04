@@ -1,0 +1,19 @@
+package com.admin.goods.action;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class AdminGoodsDeleteAction implements Action {
+
+	@Override
+	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		System.out.println("M : AdminGoodsDeleteAction_execute() 호출");
+		
+		// 상품정보를 바로 DB애서 삭제 -> 상품리스트로 이동
+		//AdminGoodsDeleteAction() 객체 생성
+		
+		
+		return null;
+	}
+
+}

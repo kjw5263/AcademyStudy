@@ -179,3 +179,18 @@
 5월 27, 2021 09:28:05.49 NEW SESSION
 5월 27, 2021 09:28:05.49 [7308:10412:0527/092805.494:ERROR:device_event_log_impl.cc(214)] [09:28:05.493] Bluetooth: bluetooth_adapter_winrt.cc:1072 Getting Default Adapter failed.
 5월 27, 2021 09:29:43.56 [6352:3584:0527/092943.565:ERROR:device_event_log_impl.cc(214)] [09:29:43.565] Bluetooth: bluetooth_adapter_winrt.cc:1072 Getting Default Adapter failed.
+
+6월 03, 2021 09:48:11.65 NEW SESSION
+6월 03, 2021 09:48:11.65 [5412:6460:0603/094811.648:ERROR:device_event_log_impl.cc(214)] [09:48:11.649] Bluetooth: bluetooth_adapter_winrt.cc:1072 Getting Default Adapter failed.
+6월 03, 2021 09:52:34.59 [9848:11048:0603/095234.596:ERROR:device_event_log_impl.cc(214)] [09:52:34.596] Bluetooth: bluetooth_adapter_winrt.cc:1072 Getting Default Adapter failed.
+6월 03, 2021 10:04:19.07 [6216:6908:0603/100419.079:ERROR:device_event_log_impl.cc(214)] [10:04:19.079] Bluetooth: bluetooth_adapter_winrt.cc:1072 Getting Default Adapter failed.
+6월 03, 2021 10:55:15.12 [3964:7616:0603/105515.127:ERROR:device_event_log_impl.cc(214)] [10:55:15.128] Bluetooth: bluetooth_adapter_winrt.cc:1072 Getting Default Adapter failed.
+6월 03, 2021 11:38:22.03 [11184:9368:0603/113822.032:ERROR:device_event_log_impl.cc(214)] [11:38:22.025] Bluetooth: bluetooth_adapter_winrt.cc:1072 Getting Default Adapter failed.
+6월 03, 2021 11:46:58.73 [6460:6528:0603/114658.737:ERROR:device_event_log_impl.cc(214)] [11:46:58.738] Bluetooth: bluetooth_adapter_winrt.cc:1072 Getting Default Adapter failed.
+
+6월 03, 2021 19:13:45.76 NEW SESSION
+6월 03, 2021 19:13:45.76 [9788:11348:0603/191345.759:ERROR:device_event_log_impl.cc(214)] [19:13:45.759] Bluetooth: bluetooth_adapter_winrt.cc:1072 Getting Default Adapter failed.
+6월 03, 2021 19:14:16.25 [552:12004:0603/191416.256:ERROR:device_event_log_impl.cc(214)] [19:14:16.256] Bluetooth: bluetooth_adapter_winrt.cc:1072 Getting Default Adapter failed.
+
+6월 04, 2021 14:09:42.36 NEW SESSION
+6월 04, 2021 14:09:42.36 [1196:4768:0604/140942.359:ERROR:device_event_log_impl.cc(214)] [14:09:42.359] Bluetooth: bluetooth_adapter_winrt.cc:1072 Getting Default Adapter failed.

@@ -21,7 +21,7 @@
 	<fieldset>
 		<legend>관리자 상품 수정하기</legend>
 		<!-- cos 라이브러리 필요! lib 폴더에 추가해주기 -->
-		<form action="./AdminGoodsModifyAction.ag" method="post" enctype="multipart/form-data">
+		<form action="./AdminGoodsModifyAction.ag" method="post">
 			<!-- 상품 정보를 업데이트 하기 위해서 상품 번호를 저장하기 -->
 			<input type="hidden" name="num" value="<%=dto.getNum() %>">	
 			<table border="1">
@@ -95,12 +95,12 @@
 				
 				<tr>
 				  <td>인기상품</td>
-				  <td><input type="radio" name="best"   <%
+				  <td><input type="radio" name="best" value="1"  <%
 				       if(dto.getBest() == 1) { %>
 				       	checked
 				       	<% } %>
-				       	>예
-				  	  <input type="radio" name="best"  <%
+				       	 >예
+				  	  <input type="radio" name="best" value="0" <%
 				       if(dto.getBest() == 0) { %>
 				       	checked
 				       	<% } %>

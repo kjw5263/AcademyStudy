@@ -2,4 +2,6 @@
 <typeInfoHistroy>
 <typeInfo handle="=ELJSTLJSP2/C:\/Program Files\/Apache Software Foundation\/Tomcat 8.5\/lib\/servlet-api.jar&lt;javax.servlet.http(HttpServlet.class[HttpServlet" modifiers="1057" timestamp="1611919448000"/>
 <typeInfo handle="=Model2JSP2/src&lt;com.admin.goods.action{Action.java[Action" modifiers="513" timestamp="1622076413589"/>
+<typeInfo handle="=Model2JSP2/src&lt;com.goods.action{Action.java[Action" modifiers="513" timestamp="1622685052852"/>
+<typeInfo handle="=Model2JSP2/src&lt;com.basket.action{Action.java[Action" modifiers="513" timestamp="1622790840295"/>
 </typeInfoHistroy>

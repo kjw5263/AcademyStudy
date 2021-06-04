@@ -11,8 +11,10 @@
 	<%
 		 // index.jsp 페이지
 		 //response.sendRedirect("./MemberJoin.me");
-		 //response.sendRedirect("./MemberLogin.me");
-		
+		//response.sendRedirect("./MemberLogin.me");
+		 
+		 // 메인 페이지로 이동
+		 response.sendRedirect("./Main.me");
 		// 내가 모델2에서 실행할 수 있는 jsp 파일은, index.jsp 밖에 없다!
 		
 		
@@ -23,7 +25,7 @@
 		//response.sendRedirect("./GoodsAdd.ag"); // 컨트롤러의 GoodsAdd.ag 부분으로 간다!
 		
 		// 관리자 상품 리스트로 바로 가기
-		response.sendRedirect("./AdminGoodsList.ag");
+		//response.sendRedirect("./AdminGoodsList.ag");
 		
 		
 	%>

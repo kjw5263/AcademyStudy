@@ -11,7 +11,7 @@
 <body>
 <h1> WebContent/adminGoods/admin_goods_list.jsp</h1>
 <h2>등록 상품 목록</h2>
-<h3>상품 등록하기</h3>
+<h3><a href="./GoodsAdd.ag">상품 등록하기</a></h3>
 
 <!-- setAttribute로 받아온(공유된) list 정보 
  -->
@@ -56,11 +56,12 @@
 	  <td><%=gdto.getAmount() %></td>
 	  <td><%=gdto.getDate() %></td>
 	  <td>
-	  	<a href="./AdminGoodsModify.ag?num=<%=gdto.getNum()%>">수정</a>/<a href="">삭제</a>
+	  	<a href="./AdminGoodsModify.ag?num=<%=gdto.getNum()%>">수정</a>/<a href="./AdminGoodsDelete.ag?num=<%=gdto.getNum()%>">삭제</a>
 	  </td>
 	</tr>
 	
 	<% }%>
+	
 	
 </table>
 </body>
