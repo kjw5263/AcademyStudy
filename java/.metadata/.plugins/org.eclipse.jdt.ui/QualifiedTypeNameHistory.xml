@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="FlowLayoutEx"/>
-    <fullyQualifiedTypeName name="BorderLayoutEx"/>
     <fullyQualifiedTypeName name="java.awt.BorderLayout"/>
     <fullyQualifiedTypeName name="GridLayoutEx"/>
     <fullyQualifiedTypeName name="java.awt.GridLayout"/>
@@ -48,7 +46,6 @@
     <fullyQualifiedTypeName name="java.util.Iterator"/>
     <fullyQualifiedTypeName name="ThreadDemo4"/>
     <fullyQualifiedTypeName name="ThreadDemo5"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="Toilet"/>
     <fullyQualifiedTypeName name="Family"/>
     <fullyQualifiedTypeName name="java.security.AllPermission"/>
@@ -60,4 +57,7 @@
     <fullyQualifiedTypeName name="Producer"/>
     <fullyQualifiedTypeName name="Consumer"/>
     <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="D"/>
+    <fullyQualifiedTypeName name="E"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>

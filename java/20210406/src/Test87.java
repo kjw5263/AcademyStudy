@@ -34,6 +34,6 @@ class G extends F{
 
 public class Test87 {
 	public static void main(String[] args) {
-		G g = new G();
+		G g = new G(5);
 	}
 }

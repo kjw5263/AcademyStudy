@@ -10,9 +10,9 @@ class D {	// 부모 클래스 역할을 함
 //	}
 	
 	// d인스턴스 변수의 값을 초기화할 생성자
-//	public D(int x) {
-//		this.d = x;
-//	}
+	public D(int x) {
+		this.d = x;
+	}
 }
 
 class E extends D{
@@ -20,6 +20,8 @@ class E extends D{
 	public E() {
 		System.out.println("생성자 E");
 	}
+	
+	
 	
 }
 

@@ -34,6 +34,12 @@
 	<hr>
 	<h3> <a href="./GoodsList.go">쇼핑몰 메인 페이지 (사용자)</a></h3>
 	
+	<hr>
+	
+	<h3><a href="./BasketList.ba"> 쇼핑몰 장바구니(사용자)</a></h3>
+	<h3><a href="./OrderList.or"> 쇼핑몰 주문목록(사용자)</a></h3>
+	
+	
 	<!-- 아이디가 Null 일 때, NullPointerException 
 		null과 문자열은 비교 자체 불가!  -->
 		
@@ -45,6 +51,7 @@
 	<h3><a href="./MemberList.me"> 회원 목록 보기 </a></h3>
 	
 	<h3><a href="./AdminGoodsList.ag"> 상품 목록 보기(관리자) </a></h3>
+	<h3><a href="./AdminOrderList.ao"> 주문 목록 보기(관리자) </a></h3>
 	
 	<%
 	}

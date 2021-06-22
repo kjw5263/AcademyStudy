@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+@media /*not 또는 only*/ print {
+	/* 인쇄 미리보기 설정 해주는 것!! 
+	only는 해당 유형에서만, 
+	not은 print만 제외하고
+	*/
+	body {
+		background-color:#fff;
+		color:#000;
+	}
+}
+
+body {
+	background-color: #fff;
+	color:#333;
+}
+
+
+@media screen and (min-width:768px) {
+	body {
+		background-color:#777;
+		color:#fff;
+		font-size:1.1em;
+	}
+	
+}
+
+
+@media screen and (min-width:1000px) {
+	body {
+		background-color:#aff;
+		color:#026;
+		font-size:1.2em;
+		
+	}
+}
+
+
+#box04 {
+	border: 2px dashed #ff80c0;
+}
+
+#box05 {
+	background-color:#ff80c0;
+}
+
+@media screen and (orientation:landscape){
+	#box04, #box05 { float:left;}
+}
+
+

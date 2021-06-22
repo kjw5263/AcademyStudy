@@ -1,0 +1,17 @@
+package com.itwillbs.test;
+
+// Person 인터페이스 객체를 약한 결합으로 생성
+public class PersonImpl implements Person{
+
+	private String name;
+	private int age;
+	
+	
+	@Override
+	public void sayHello() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+}

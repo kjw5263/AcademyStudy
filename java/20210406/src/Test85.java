@@ -12,7 +12,7 @@
 
 /* 조합 4가지 */
 //조합 1번 -> 자식 클래스의 기본 생상자가 호출되면 자동으로 부모클래스의 기본 생성자가 호출됨
-class A2 {	// 부모 클래스 
+class A2 {	// 부모 클래스
 	// 기본 생성자
 	public A2() {
 		System.out.println("기본 생성자A2");
@@ -36,7 +36,7 @@ class B2 extends A2{	// 자식클래스 B2
 public class Test85 {
 
 	public static void main(String[] args) {
-		B2 b2 = new B2(10);
+		B2 b2 = new B2();
 
 	}
 

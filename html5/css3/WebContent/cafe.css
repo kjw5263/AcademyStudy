@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+* {margin:0; padding:0;}
+
+body {font-family: , sans-serif; }
+
+a {text-decoration: none;}
+
+nav a:link, nav a:visited {
+	color:#fff;
+}
+
+nav a:hover, nav a:active {
+	color:#ff0;
+}
+
+
+h2 {font-size: 1.8em;}
+h3 {font-size: 1.3em;}
+
+p {font-size: 1.3em; line-height: 2.5em; }
+li {font-size: 1em; line-height: 2em; }
+
+#container {
+	border: 2px solid red;
+	width: 100%;
+	margin: 0 auto;
+}
+
+header {
+	background-image: url("img/header.jpg");
+	height: 300px;
+	background-position: center center;
+	background-size: contain;
+}
+
+#main_nav {
+	height: 50px;
+	background-color: rgba(0,0,0,0);
+	/* r,g,b,a(read,green,blue,alpha)
+	r,g,b는 0~255 사이의 값
+	빛의 삼원색에 투명도(a=0~1 사이의값, 0은 완전튜명)을 추가함 */
+}
+
+#main_nav ul {
+	list-style: none;
+	/* 목록 앞의 기본 모양 -없애기*/
+	padding: 10px;
+}
+#main_nav li {
+	border: 2px solid pink;
+	display : inline-block;
+	margin: 5px 15px;
+	font-size:0.8em;
+	font-family: ;
+}
+
+/* 모바일 - 767px 이하 */
+section {
+	width :100%;
+	padding: 15px 5% 10px 5%;
+	position:relative;
+	/* 하위요소가 absolute일때 기준이 될 상위요소의 position값을 변경함 */
+}
+
+section:nth-of-type(2n) {
+	background-color: #eee;
+}
+
+.pg-title {
+	border : 1px splid red;
+	padding: 30px 50px;
+	position:absolute;
+	/* 상위요소 기준으로 자리 잡기 */
+	left: 0; top:20px;
+}
+
+.content {
+	border : 1px solid red;
+	width : 90%;
+	padding: 20px;
+	box-sizing: border-box;
+	/* 요소의 크기 계산시 padding과 border값을 포함하도록 */
+	margin : 80px auto 10px;
+}
+
+.text h3 {
+	color : #0094ff;
+	font-weight: 600;
+}
+
+.photo {
+	display : none;
+	/* 이미지 숨김 */
+}
+
+.footer {
+	height:100px;
+	background-color : #000;
+	color:#fff;
+}
+
+footer p {text-align:center;
+	line-height:100px;
+	/*영역의 높이갚과 행간을 일치시켜서 수직 정렬을 중앙으로 
+	(height=line-height) */
+	text-transform:capitalize;
+	font-family: ;}
+	
+	
+/*tablet - 768px 이상 */
+@media screen and (min-width:768px) {
+	header {height:400px; }
+	
+	#intro, #map {
+		border : 1px solid red;
+		float: left;
+		width:50%; height:400px;
+		box-sizing:borer-box;}
+	
+	#choice { clear:both; }
+}
+
+	

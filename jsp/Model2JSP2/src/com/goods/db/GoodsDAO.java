@@ -13,6 +13,7 @@ import javax.naming.NamingException;
 import javax.sql.DataSource;
 
 import com.admin.goods.db.GoodsDTO;
+import com.basket.db.BasketDTO;
 
 public class GoodsDAO {
 	private Connection conn = null;
@@ -215,11 +216,38 @@ public class GoodsDAO {
 			closeDB();
 		}
 		
-		
-		
 		return goods;
 		
 	}
+	
+	
+	public void updateAmount(List basketList) {
+		conn = getConnection();
+
+		try {
+			// 주문한 상품 개수만큼 반복 돌리면서 개수 차감해주기
+			for(int i=0; i<basketList.size(); i++){
+				BasketDTO bkDTO = (BasketDTO)basketList.get(i);
+				// 상품번호에 해당하는 장바구니 상품의 개수만큼 차감
+				sql = "update itwill_goods set amount= amount-? where num=?";
+				pstmt = conn.prepareStatement(sql);
+				pstmt.setInt(1, bkDTO.getB_g_amount());  // 상품의 개수
+				pstmt.setInt(2, bkDTO.getB_g_num());	// 상품 번호
+				pstmt.executeUpdate();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			closeDB();
+		}
+			
+			
+		
+		
+	}
+	
+	
+	
 	
 	
 }

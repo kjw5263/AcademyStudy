@@ -42,5 +42,4 @@ public class Test52 {
 		System.out.println("secondMethod() 메소드의 코드 실행 후 끝났음");
 	}
 	
-
 }

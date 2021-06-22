@@ -1,0 +1,12 @@
+package com.itwill.join;
+
+public class JoinBean {
+	private String id;
+	private String pass1;
+	private String name;
+	private String jumin;
+	private int gender;
+	private String hobby;
+	private String subject;
+	private comment;
+}

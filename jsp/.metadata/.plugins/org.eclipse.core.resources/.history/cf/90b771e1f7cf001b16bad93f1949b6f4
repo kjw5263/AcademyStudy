@@ -1,0 +1,16 @@
+package com.itwillbs.aop;
+
+import org.aopalliance.intercept.MethodInterceptor;
+import org.aopalliance.intercept.MethodInvocation;
+
+public class LoggingAdvice implements MethodInterceptor{
+
+	@Override
+	public Object invoke(MethodInvocation arg0) throws Throwable {
+		System.out.println("[메소드 실행 전 : LoggingAdvice]");
+		System.out.println(args0.getMethod() + "<< 해당 메소드 호출전");
+		return null;
+	}
+	
+	
+}

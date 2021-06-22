@@ -1,9 +1,11 @@
 package com.admin.goods.action;
 
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.admin.goods.db.AdminGoodsDAO;
+
 
 public class AdminGoodsDeleteAction implements Action {
 

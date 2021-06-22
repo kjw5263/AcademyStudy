@@ -1,0 +1,17 @@
+package com.itwillbs.test;
+
+//사용자
+public class PersonTest {
+
+	public static void main(String[] args) {
+		// 강한 결합을 통한 객체 생성 후 사용
+		// => 해당 객체를 의존하고 있다
+		PersonImpl pi = new PersonImpl();
+		pi.sayHello();
+		
+		// 약한 결합을 통한 객체 생성 후 사용
+		Person p = new PersonImpl();
+		p.sayHello();
+	}
+
+}
