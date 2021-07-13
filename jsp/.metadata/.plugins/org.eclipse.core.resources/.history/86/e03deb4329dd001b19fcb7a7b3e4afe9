@@ -1,0 +1,30 @@
+package DB;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class MemberDAO {
+	
+	// 접속할 오라클 DBMS DB 서버주소
+	String url = "jdbc:oracle:thin:@192.168.2.200:1521:XE";
+	
+	// 접속할 ID, PASS 저장
+	String dbid = "system", dbpass="1234";
+	
+	Connection conn;
+	PreparedStatement pstmt;
+	ResultSet rs;
+	
+	public void getCon() {
+		try{
+			Class.forName("oracle.jdbc.drivcer.OracleDriver");
+			
+			conn = DriverManager.getConnection(url, dbid, dbpass);
+		} catch(Exception e){
+			System.out.println("오라클 드라이버 등록 실패"+e);
+		}
+	}
+}
+

@@ -1,0 +1,14 @@
+127.0.0.1 - - [23/Jun/2021:12:27:13 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [23/Jun/2021:12:27:13 +0900] "GET /Model2JSP2/index.jsp HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [23/Jun/2021:12:27:13 +0900] "GET /Model2JSP2/Main.me HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [23/Jun/2021:12:27:13 +0900] "GET /Model2JSP2/MemberLogin.me HTTP/1.1" 200 639
+0:0:0:0:0:0:0:1 - - [23/Jun/2021:12:27:14 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [23/Jun/2021:12:27:25 +0900] "POST /Model2JSP2/MemberLoginAction.me HTTP/1.1" 200 84
+0:0:0:0:0:0:0:1 - - [23/Jun/2021:12:27:28 +0900] "POST /Model2JSP2/MemberLoginAction.me HTTP/1.1" 200 84
+0:0:0:0:0:0:0:1 - - [23/Jun/2021:12:27:31 +0900] "POST /Model2JSP2/MemberLoginAction.me HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [23/Jun/2021:12:27:31 +0900] "GET /Model2JSP2/Main.me HTTP/1.1" 200 1009
+0:0:0:0:0:0:0:1 - - [23/Jun/2021:12:27:38 +0900] "GET /Model2JSP2/OrderList.or HTTP/1.1" 200 763
+0:0:0:0:0:0:0:1 - - [23/Jun/2021:12:27:42 +0900] "GET /Model2JSP2/BasketList.ba HTTP/1.1" 200 708
+0:0:0:0:0:0:0:1 - - [23/Jun/2021:12:27:44 +0900] "GET /Model2JSP2/OrderStart.or HTTP/1.1" 200 2137
+0:0:0:0:0:0:0:1 - - [23/Jun/2021:12:42:33 +0900] "GET /Model2JSP2/index.jsp HTTP/1.1" 200 821
+0:0:0:0:0:0:0:1 - - [23/Jun/2021:12:46:39 +0900] "GET /Model2JSP2/index.jsp HTTP/1.1" 200 919

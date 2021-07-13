@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javax.naming.InitialContext"/>
-<fullyQualifiedTypeName name="javax.sql.DataSource"/>
 <fullyQualifiedTypeName name="com.itwillbs.board.BoardBean"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
@@ -13,7 +11,6 @@
 <fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthSeparatorUI"/>
 <fullyQualifiedTypeName name="org.apache.jasper.compiler.Node.ForwardAction"/>
 <fullyQualifiedTypeName name="java.sql.Timestamp"/>
-<fullyQualifiedTypeName name="java.sql.Connection"/>
 <fullyQualifiedTypeName name="java.io.PrintWriter"/>
 <fullyQualifiedTypeName name="com.member.action.MemberListAction"/>
 <fullyQualifiedTypeName name="com.member.action.ActionForward"/>
@@ -31,13 +28,10 @@
 <fullyQualifiedTypeName name="com.goods.action.GoodsDetailAction"/>
 <fullyQualifiedTypeName name="com.goods.action.ActionForward"/>
 <fullyQualifiedTypeName name="com.basket.action.ActionForward"/>
-<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
-<fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="com.member.db.MemberDAO"/>
 <fullyQualifiedTypeName name="com.member.db.MemberDTO"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="com.basket.db.BasketDAO"/>
-<fullyQualifiedTypeName name="java.util.Vector"/>
 <fullyQualifiedTypeName name="com.basket.action.BasketListAction"/>
 <fullyQualifiedTypeName name="com.admin.goods.db.GoodsDTO"/>
 <fullyQualifiedTypeName name="java.util.Calendar"/>
@@ -60,4 +54,10 @@
 <fullyQualifiedTypeName name="org.aopalliance.intercept.MethodInterceptor"/>
 <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
 <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.util.Vector"/>
 </qualifiedTypeNameHistroy>

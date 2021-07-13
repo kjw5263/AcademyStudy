@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<link href="https://www.oliveyoung.co.kr/pc-static-root/css/board.css?dumm=202106220001"></link>
 </head>
 <body>
 	<!-- model2 실행페이지 -->
@@ -14,7 +15,7 @@
 		//response.sendRedirect("./MemberLogin.me");
 		 
 		 // 메인 페이지로 이동
-		 response.sendRedirect("./Main.me");
+		//response.sendRedirect("./Main.me");
 		// 내가 모델2에서 실행할 수 있는 jsp 파일은, index.jsp 밖에 없다!
 		
 		
@@ -28,6 +29,29 @@
 		//response.sendRedirect("./AdminGoodsList.ag");
 		
 		
+		
 	%>
+	
+	
+	<table>
+	<thead>
+				<tr>
+					<th scope="col">상품정보</th>
+				<!-- 2019-11-15 추가 (오늘드림배송 선물포장) Start -->
+				
+				<!-- 2019-11-15 추가 (오늘드림배송 선물포장) End -->
+					<th scope="col">판매가</th>
+					<th scope="col">수량</th>
+					<!-- 
+					2017-01-24 수정 : 배송정보 삭제
+					<th scope="col">배송정보</th>
+					-->
+					<th scope="col">구매가</th><!-- 2017-01-24 수정 : 문구수정 -->
+				</tr>
+				</thead>
+	
+	</table>
+	
+	
 </body>
 </html>
